@@ -51,7 +51,8 @@ int main (int argc, char* argv[])
 	gtk_init (&argc, &argv);
 
 	//add_pixmap_directory (PACKAGE_DATA_DIR "/" PACKAGE "/pixmaps");
-
+	add_pixmap_directory("frontend/pixmaps");
+	
 	win_main = create_win_main();
 	gtk_widget_show(win_main);
 
