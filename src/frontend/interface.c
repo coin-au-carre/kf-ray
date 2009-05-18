@@ -81,6 +81,7 @@ create_win_main (void)
   GtkWidget *chk_generate;
   GtkWidget *entry_sample;
   GtkWidget *lbl_samples;
+  GtkWidget *img_logo;
   GtkAccelGroup *accel_group;
 
   accel_group = gtk_accel_group_new ();
@@ -334,6 +335,11 @@ create_win_main (void)
   gtk_layout_put (GTK_LAYOUT (layout_main), lbl_samples, 32, 393);
   gtk_widget_set_size_request (lbl_samples, 78, 20);
 
+  img_logo = create_pixmap (win_main, "logo.jpg");
+  gtk_widget_show (img_logo);
+  gtk_layout_put (GTK_LAYOUT (layout_main), img_logo, 0, 24);
+  gtk_widget_set_size_request (img_logo, 160, 80);
+
   g_signal_connect ((gpointer) open, "activate",
                     G_CALLBACK (on_open_activate),
                     NULL);
@@ -429,6 +435,7 @@ create_win_main (void)
   GLADE_HOOKUP_OBJECT (win_main, chk_generate, "chk_generate");
   GLADE_HOOKUP_OBJECT (win_main, entry_sample, "entry_sample");
   GLADE_HOOKUP_OBJECT (win_main, lbl_samples, "lbl_samples");
+  GLADE_HOOKUP_OBJECT (win_main, img_logo, "img_logo");
 
   gtk_window_add_accel_group (GTK_WINDOW (win_main), accel_group);
 
