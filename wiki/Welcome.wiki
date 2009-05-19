@@ -1,0 +1,1368 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+ 
+
+			<script language='javascript' src='http://127.0.0.1:1025/js.cgi?pca&r=19912'></script>
+
+<script type="text/javascript">
+ 
+ 
+ 
+ var codesite_token = "b818d37e113cb208cd267f6385c07459";
+ 
+ 
+ var logged_in_user_email = "Florian.coin@gmail.com";
+ 
+ </script>
+ <title>Welcome.wiki - 
+ kf-ray -
+ 
+ Google Code</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+ 
+ <link type="text/css" rel="stylesheet" href="http://www.gstatic.com/codesite/ph/2012628327598470277/css/ph_core.css">
+ 
+ <link type="text/css" rel="stylesheet" href="http://www.gstatic.com/codesite/ph/2012628327598470277/css/ph_detail.css" >
+ 
+ 
+ <link type="text/css" rel="stylesheet" href="http://www.gstatic.com/codesite/ph/2012628327598470277/css/d_sb_20080522.css" >
+ 
+ 
+ 
+<!--[if IE]>
+ <link type="text/css" rel="stylesheet" href="http://www.gstatic.com/codesite/ph/2012628327598470277/css/d_ie.css" >
+<![endif]-->
+</head>
+<body class="t4">
+ <div id="gaia">
+ 
+ <span>
+ 
+ <b>Florian.coin@gmail.com</b>
+ 
+ 
+ | <a href="/u/Florian.coin/" id="projects-dropdown" onclick="return false;">My favorites</a>
+ 
+ | <a href="/u/Florian.coin/" onclick="_CS_click('/gb/ph/profile');" title="Profile, Updates, and Settings">Profile</a>
+ | <a href="http://www.google.com/accounts/Logout?continue=http%3A%2F%2Fcode.google.com%2Fp%2Fkf-ray%2Fsource%2Fbrowse%2Fwiki%2FWelcome.wiki%3Fr%3D6" onclick="_CS_click('/gb/ph/signout');">Sign out</a>
+ 
+ </span>
+
+ </div>
+ <div class="gbh" style="left: 0pt;"></div>
+ <div class="gbh" style="right: 0pt;"></div>
+ 
+ 
+ <div style="height: 1px"></div>
+ <table style="padding:0px; margin: 20px 0px 0px 0px; width:100%" cellpadding="0" cellspacing="0">
+ <tr style="height: 58px;">
+ <td style="width: 55px; text-align:center;">
+ <a href="/p/kf-ray/">
+ 
+ 
+ 
+ <img src="/p/kf-ray/logo?logo_id=1242659638" alt="Logo">
+ 
+ 
+ </a>
+ </td>
+ <td style="padding-left: 0.8em">
+ 
+ <div id="pname" style="margin: 0px 0px -3px 0px">
+ <a href="/p/kf-ray/" style="text-decoration:none; color:#000">kf-ray</a>
+ </div>
+ <div id="psum">
+ <i><a id="project_summary_link" href="/p/kf-ray/" style="text-decoration:none; color:#000">A parallel raytracer</a></i>
+ </div>
+ 
+ </td>
+ <td style="white-space:nowrap; text-align:right">
+ 
+ <form action="/hosting/search">
+ <input size="30" name="q" value="">
+ <input type="submit" name="projectsearch" value="Search projects" >
+ </form>
+ 
+ </tr>
+ </table>
+
+
+<table id="mt" cellspacing="0" cellpadding="0" width="100%" border="0">
+ <tr>
+ <th onclick="if (!cancelBubble) _go('/p/kf-ray/');">
+ <div class="tab inactive">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <a onclick="cancelBubble=true;" href="/p/kf-ray/">Project&nbsp;Home</a>
+ </div>
+ </div>
+ </th><td>&nbsp;&nbsp;</td>
+ 
+ 
+ 
+ 
+ <th onclick="if (!cancelBubble) _go('/p/kf-ray/downloads/list');">
+ <div class="tab inactive">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <a onclick="cancelBubble=true;" href="/p/kf-ray/downloads/list">Downloads</a>
+ </div>
+ </div>
+ </th><td>&nbsp;&nbsp;</td>
+ 
+ 
+ 
+ 
+ 
+ <th onclick="if (!cancelBubble) _go('/p/kf-ray/w/list');">
+ <div class="tab inactive">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <a onclick="cancelBubble=true;" href="/p/kf-ray/w/list">Wiki</a>
+ </div>
+ </div>
+ </th><td>&nbsp;&nbsp;</td>
+ 
+ 
+ 
+ 
+ 
+ <th onclick="if (!cancelBubble) _go('/p/kf-ray/issues/list');">
+ <div class="tab inactive">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <a onclick="cancelBubble=true;" href="/p/kf-ray/issues/list">Issues</a>
+ </div>
+ </div>
+ </th><td>&nbsp;&nbsp;</td>
+ 
+ 
+ 
+ 
+ 
+ <th onclick="if (!cancelBubble) _go('/p/kf-ray/source/browse/');">
+ <div class="tab active">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <a onclick="cancelBubble=true;" href="/p/kf-ray/source/browse/">Source</a>
+ </div>
+ </div>
+ </th><td>&nbsp;&nbsp;</td>
+ 
+ 
+ <th onclick="if (!cancelBubble) _go('/p/kf-ray/admin');">
+ <div class="tab inactive">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <a onclick="cancelBubble=true;" href="/p/kf-ray/admin">Administer</a>
+ </div>
+ </div>
+ </th>
+ <td width="100%">&nbsp;</td>
+ </tr>
+</table>
+<table cellspacing="0" cellpadding="0" width="100%" align="center" border="0" class="st">
+ <tr>
+ 
+ 
+ 
+ 
+ 
+ 
+ <td>
+ 
+<div class="st2">
+ <div class="isf">
+ <span class="inst1"><a href="/p/kf-ray/source/checkout">Checkout</a></span> |
+ <span class="inst2"><a href="/p/kf-ray/source/browse/">Browse</a></span> |
+ <span class="inst3"><a href="/p/kf-ray/source/list">Changes</a></span> |
+ <form action="http://www.google.com/codesearch" method="get" style="display:inline"
+ onsubmit="document.getElementById('codesearchq').value = document.getElementById('origq').value + ' package:http://kf-ray\\.googlecode\\.com'">
+ <input type="hidden" name="q" id="codesearchq" value="">
+ <input maxlength="2048" size="35" id="origq" name="origq" value="" title="Google Code Search" style="font-size:92%">&nbsp;<input type="submit" value="Search Trunk" name="btnG" style="font-size:92%">
+ 
+  |
+ <a href="/p/kf-ray/issues/entry?show=review&former=sourcelist">Request code review</a>
+ 
+ 
+ </form>
+ </div>
+</div>
+
+
+ </td>
+ 
+ 
+ 
+ 
+ 
+ <td height="4" align="right" valign="top" class="bevel-right">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ </td>
+ </tr>
+</table>
+<script type="text/javascript">
+ var cancelBubble = false;
+ function _go(url) { document.location = url; }
+</script>
+
+<div id="maincol"
+ 
+>
+
+ 
+<!-- IE -->
+
+
+
+<div class="expand">
+
+
+<style type="text/css">
+ #file_flipper { display: inline; float: right; white-space: nowrap; }
+ #file_flipper.hidden { display: none; }
+ #file_flipper .pagelink { color: #0000CC; text-decoration: underline; }
+ #file_flipper #visiblefiles { padding-left: 0.5em; padding-right: 0.5em; }
+</style>
+<div id="nav_and_rev" class="heading">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <div class="pagination" style="margin-left: 2em">
+ <table cellpadding="0" cellspacing="0" class="flipper">
+ <tbody>
+ <tr>
+ 
+ <td><b>r6</b></td>
+ 
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ 
+ <div class="" style="vertical-align: top">
+ <div class="src_crumbs src_nav">
+ <strong class="src_nav">Source path:&nbsp;</strong>
+ <span id="crumb_root">
+ 
+ <a href="/p/kf-ray/source/browse/?r=6">svn</a>/&nbsp;</span>
+ <span id="crumb_links" class="ifClosed"><a href="/p/kf-ray/source/browse/wiki/?r=6">wiki</a><span class="sp">/&nbsp;</span>Welcome.wiki</span>
+ 
+ 
+ </div>
+ 
+ </div>
+ <div style="clear:both"></div>
+ </div>
+</div>
+
+<style type="text/css">
+ 
+  tr.inline_comment {
+ background: #fff;
+ vertical-align: top;
+ }
+ div.draft, div.published {
+ padding: .3em;
+ border: 1px solid #999; 
+ margin-bottom: .1em;
+ font-family: arial, sans-serif;
+ max-width: 60em;
+ }
+ div.draft {
+ background: #ffa;
+ } 
+ div.published {
+ background: #e5ecf9;
+ }
+ div.published .body, div.draft .body {
+ padding: .5em .1em .1em .1em;
+ max-width: 60em;
+ white-space: pre-wrap;
+ white-space: -moz-pre-wrap;
+ white-space: -pre-wrap;
+ white-space: -o-pre-wrap;
+ word-wrap: break-word;
+ }
+ div.draft .actions {
+ margin-left: 1em;
+ font-size: 90%;
+ }
+ div.draft form {
+ padding: .5em .5em .5em 0;
+ }
+ div.draft textarea, div.published textarea {
+ width: 95%;
+ height: 10em;
+ font-family: arial, sans-serif;
+ margin-bottom: .5em;
+ }
+
+
+ 
+ .nocursor, .nocursor td, .cursor_hidden, .cursor_hidden td {
+ background-color: white;
+ height: 2px;
+ }
+ .cursor, .cursor td {
+ background-color: darkblue;
+ height: 2px;
+ display: '';
+ }
+
+</style>
+<div class="fc">
+ 
+
+
+<table class="opened" id="review_comment_area"><tr>
+<td id="nums">
+<pre><table width="100%"><tr class="nocursor"><td></td></tr></table></pre>
+
+<pre><table><tr id="gr_svn6_1"><td id="1"><a href="#1">1</a></td></tr
+><tr id="gr_svn6_2"><td id="2"><a href="#2">2</a></td></tr
+><tr id="gr_svn6_3"><td id="3"><a href="#3">3</a></td></tr
+><tr id="gr_svn6_4"><td id="4"><a href="#4">4</a></td></tr
+><tr id="gr_svn6_5"><td id="5"><a href="#5">5</a></td></tr
+><tr id="gr_svn6_6"><td id="6"><a href="#6">6</a></td></tr
+><tr id="gr_svn6_7"><td id="7"><a href="#7">7</a></td></tr
+><tr id="gr_svn6_8"><td id="8"><a href="#8">8</a></td></tr
+><tr id="gr_svn6_9"><td id="9"><a href="#9">9</a></td></tr
+><tr id="gr_svn6_10"><td id="10"><a href="#10">10</a></td></tr
+><tr id="gr_svn6_11"><td id="11"><a href="#11">11</a></td></tr
+><tr id="gr_svn6_12"><td id="12"><a href="#12">12</a></td></tr
+><tr id="gr_svn6_13"><td id="13"><a href="#13">13</a></td></tr
+><tr id="gr_svn6_14"><td id="14"><a href="#14">14</a></td></tr
+><tr id="gr_svn6_15"><td id="15"><a href="#15">15</a></td></tr
+><tr id="gr_svn6_16"><td id="16"><a href="#16">16</a></td></tr
+><tr id="gr_svn6_17"><td id="17"><a href="#17">17</a></td></tr
+><tr id="gr_svn6_18"><td id="18"><a href="#18">18</a></td></tr
+><tr id="gr_svn6_19"><td id="19"><a href="#19">19</a></td></tr
+><tr id="gr_svn6_20"><td id="20"><a href="#20">20</a></td></tr
+><tr id="gr_svn6_21"><td id="21"><a href="#21">21</a></td></tr
+><tr id="gr_svn6_22"><td id="22"><a href="#22">22</a></td></tr
+><tr id="gr_svn6_23"><td id="23"><a href="#23">23</a></td></tr
+><tr id="gr_svn6_24"><td id="24"><a href="#24">24</a></td></tr
+><tr id="gr_svn6_25"><td id="25"><a href="#25">25</a></td></tr
+><tr id="gr_svn6_26"><td id="26"><a href="#26">26</a></td></tr
+><tr id="gr_svn6_27"><td id="27"><a href="#27">27</a></td></tr
+><tr id="gr_svn6_28"><td id="28"><a href="#28">28</a></td></tr
+><tr id="gr_svn6_29"><td id="29"><a href="#29">29</a></td></tr
+><tr id="gr_svn6_30"><td id="30"><a href="#30">30</a></td></tr
+><tr id="gr_svn6_31"><td id="31"><a href="#31">31</a></td></tr
+><tr id="gr_svn6_32"><td id="32"><a href="#32">32</a></td></tr
+><tr id="gr_svn6_33"><td id="33"><a href="#33">33</a></td></tr
+><tr id="gr_svn6_34"><td id="34"><a href="#34">34</a></td></tr
+><tr id="gr_svn6_35"><td id="35"><a href="#35">35</a></td></tr
+><tr id="gr_svn6_36"><td id="36"><a href="#36">36</a></td></tr
+><tr id="gr_svn6_37"><td id="37"><a href="#37">37</a></td></tr
+><tr id="gr_svn6_38"><td id="38"><a href="#38">38</a></td></tr
+><tr id="gr_svn6_39"><td id="39"><a href="#39">39</a></td></tr
+><tr id="gr_svn6_40"><td id="40"><a href="#40">40</a></td></tr
+><tr id="gr_svn6_41"><td id="41"><a href="#41">41</a></td></tr
+><tr id="gr_svn6_42"><td id="42"><a href="#42">42</a></td></tr
+><tr id="gr_svn6_43"><td id="43"><a href="#43">43</a></td></tr
+><tr id="gr_svn6_44"><td id="44"><a href="#44">44</a></td></tr
+><tr id="gr_svn6_45"><td id="45"><a href="#45">45</a></td></tr
+><tr id="gr_svn6_46"><td id="46"><a href="#46">46</a></td></tr
+><tr id="gr_svn6_47"><td id="47"><a href="#47">47</a></td></tr
+><tr id="gr_svn6_48"><td id="48"><a href="#48">48</a></td></tr
+><tr id="gr_svn6_49"><td id="49"><a href="#49">49</a></td></tr
+><tr id="gr_svn6_50"><td id="50"><a href="#50">50</a></td></tr
+><tr id="gr_svn6_51"><td id="51"><a href="#51">51</a></td></tr
+><tr id="gr_svn6_52"><td id="52"><a href="#52">52</a></td></tr
+><tr id="gr_svn6_53"><td id="53"><a href="#53">53</a></td></tr
+><tr id="gr_svn6_54"><td id="54"><a href="#54">54</a></td></tr
+><tr id="gr_svn6_55"><td id="55"><a href="#55">55</a></td></tr
+><tr id="gr_svn6_56"><td id="56"><a href="#56">56</a></td></tr
+><tr id="gr_svn6_57"><td id="57"><a href="#57">57</a></td></tr
+><tr id="gr_svn6_58"><td id="58"><a href="#58">58</a></td></tr
+><tr id="gr_svn6_59"><td id="59"><a href="#59">59</a></td></tr
+><tr id="gr_svn6_60"><td id="60"><a href="#60">60</a></td></tr
+><tr id="gr_svn6_61"><td id="61"><a href="#61">61</a></td></tr
+><tr id="gr_svn6_62"><td id="62"><a href="#62">62</a></td></tr
+><tr id="gr_svn6_63"><td id="63"><a href="#63">63</a></td></tr
+><tr id="gr_svn6_64"><td id="64"><a href="#64">64</a></td></tr
+><tr id="gr_svn6_65"><td id="65"><a href="#65">65</a></td></tr
+><tr id="gr_svn6_66"><td id="66"><a href="#66">66</a></td></tr
+><tr id="gr_svn6_67"><td id="67"><a href="#67">67</a></td></tr
+><tr id="gr_svn6_68"><td id="68"><a href="#68">68</a></td></tr
+><tr id="gr_svn6_69"><td id="69"><a href="#69">69</a></td></tr
+><tr id="gr_svn6_70"><td id="70"><a href="#70">70</a></td></tr
+><tr id="gr_svn6_71"><td id="71"><a href="#71">71</a></td></tr
+></table></pre>
+
+<pre><table width="100%"><tr class="nocursor"><td></td></tr></table></pre>
+</td>
+<td id="lines">
+<pre class="prettyprint"><table width="100%"><tr class="cursor_stop cursor_hidden"><td></td></tr></table></pre>
+
+<pre class="prettyprint lang-wiki"><table><tr
+id=sl_svn6_1><td class="source">#summary Welcome to the KF-Ray Project Wiki<br></td></tr
+><tr
+id=sl_svn6_2><td class="source">#sidebar TOCArticles<br></td></tr
+><tr
+id=sl_svn6_3><td class="source">&lt;wiki:toc /&gt;<br></td></tr
+><tr
+id=sl_svn6_4><td class="source"><br></td></tr
+><tr
+id=sl_svn6_5><td class="source">= What is KF-Ray =<br></td></tr
+><tr
+id=sl_svn6_6><td class="source"><br></td></tr
+><tr
+id=sl_svn6_7><td class="source">== Introduction ==<br></td></tr
+><tr
+id=sl_svn6_8><td class="source"><br></td></tr
+><tr
+id=sl_svn6_9><td class="source">_KF-Ray_ is a project we started in February 2009 at [http://www.polytech.upmc.fr/ Polytech&#39;Paris], an engineers&#39; graduate school of the University Pierre and Marie Curie (UPMC) with Jean-Baptiste Mouret as tutor.<br></td></tr
+><tr
+id=sl_svn6_10><td class="source"><br></td></tr
+><tr
+id=sl_svn6_11><td class="source">The v1.0.1 is the last version.<br></td></tr
+><tr
+id=sl_svn6_12><td class="source">This version is shown at the end of the year.<br></td></tr
+><tr
+id=sl_svn6_13><td class="source"><br></td></tr
+><tr
+id=sl_svn6_14><td class="source">We want to keep continuing this project because it is really interesting there are so many things to add and maybe one day someone may find it useful (we hope !).<br></td></tr
+><tr
+id=sl_svn6_15><td class="source"><br></td></tr
+><tr
+id=sl_svn6_16><td class="source"><br></td></tr
+><tr
+id=sl_svn6_17><td class="source">==v1.0.1 Features==<br></td></tr
+><tr
+id=sl_svn6_18><td class="source"><br></td></tr
+><tr
+id=sl_svn6_19><td class="source"> * Effects<br></td></tr
+><tr
+id=sl_svn6_20><td class="source">  ** Reflections, shadows, refractions (in progress transparency is available)<br></td></tr
+><tr
+id=sl_svn6_21><td class="source">  ** Bump mapping<br></td></tr
+><tr
+id=sl_svn6_22><td class="source"> * Objects<br></td></tr
+><tr
+id=sl_svn6_23><td class="source">  ** Lights (punctual)<br></td></tr
+><tr
+id=sl_svn6_24><td class="source">  ** Spheres<br></td></tr
+><tr
+id=sl_svn6_25><td class="source">  ** Planes<br></td></tr
+><tr
+id=sl_svn6_26><td class="source"> * Reflectance models <br></td></tr
+><tr
+id=sl_svn6_27><td class="source">  ** Diffuse (Lambert)<br></td></tr
+><tr
+id=sl_svn6_28><td class="source">  ** Specular (Blinn-Phong)<br></td></tr
+><tr
+id=sl_svn6_29><td class="source"> * Procedural textures<br></td></tr
+><tr
+id=sl_svn6_30><td class="source">  ** Perlin noise (turbulence, wood, marbel)<br></td></tr
+><tr
+id=sl_svn6_31><td class="source">  ** Checker<br></td></tr
+><tr
+id=sl_svn6_32><td class="source"> * Perspective projection with a right handed coordinate system<br></td></tr
+><tr
+id=sl_svn6_33><td class="source"> * High Performance Parallel Computing<br></td></tr
+><tr
+id=sl_svn6_34><td class="source">  ** Work with several computers in the same time<br></td></tr
+><tr
+id=sl_svn6_35><td class="source">  ** Dynamic Load Balancing (master/slave)<br></td></tr
+><tr
+id=sl_svn6_36><td class="source"> * Need only few libraries<br></td></tr
+><tr
+id=sl_svn6_37><td class="source"> * Load personalised description files with easy syntax<br></td></tr
+><tr
+id=sl_svn6_38><td class="source"> * Easy to use with a simple user interface in GTK+<br></td></tr
+><tr
+id=sl_svn6_39><td class="source"> * Well-documented code easy to read and modify (Doxygen)<br></td></tr
+><tr
+id=sl_svn6_40><td class="source"> * Can render some animations (in progress)<br></td></tr
+><tr
+id=sl_svn6_41><td class="source"><br></td></tr
+><tr
+id=sl_svn6_42><td class="source">Consult the [TODO Todo list] to see what would be the new features of KF-Ray !<br></td></tr
+><tr
+id=sl_svn6_43><td class="source"><br></td></tr
+><tr
+id=sl_svn6_44><td class="source">= Manual =<br></td></tr
+><tr
+id=sl_svn6_45><td class="source"><br></td></tr
+><tr
+id=sl_svn6_46><td class="source">    * [Manual KF-Ray User-Guide (Manual)]<br></td></tr
+><tr
+id=sl_svn6_47><td class="source">    <br></td></tr
+><tr
+id=sl_svn6_48><td class="source">    <br></td></tr
+><tr
+id=sl_svn6_49><td class="source">= Developpment =<br></td></tr
+><tr
+id=sl_svn6_50><td class="source">    <br></td></tr
+><tr
+id=sl_svn6_51><td class="source">==Libraries==<br></td></tr
+><tr
+id=sl_svn6_52><td class="source"> * Lex/Yacc, a compiler or parser for interpreting and reading the description file language<br></td></tr
+><tr
+id=sl_svn6_53><td class="source"> * GTK+ a library to build graphical user interfaces<br></td></tr
+><tr
+id=sl_svn6_54><td class="source"> * MPI for parallel computing<br></td></tr
+><tr
+id=sl_svn6_55><td class="source"><br></td></tr
+><tr
+id=sl_svn6_56><td class="source">==Tools==<br></td></tr
+><tr
+id=sl_svn6_57><td class="source"> * VI, Gedit as text editor<br></td></tr
+><tr
+id=sl_svn6_58><td class="source"> * Codeblocks as IDE<br></td></tr
+><tr
+id=sl_svn6_59><td class="source"> * gdb, valgrind, ddd as debuging tools<br></td></tr
+><tr
+id=sl_svn6_60><td class="source"> * Doxygen to document the header files<br></td></tr
+><tr
+id=sl_svn6_61><td class="source"> * Imagemagick to see the images and animations<br></td></tr
+><tr
+id=sl_svn6_62><td class="source"> * Subversion (SVN) a version control system<br></td></tr
+><tr
+id=sl_svn6_63><td class="source"><br></td></tr
+><tr
+id=sl_svn6_64><td class="source">==Misc==<br></td></tr
+><tr
+id=sl_svn6_65><td class="source">    * [CodingStyle Coding Rules for KF-Ray]<br></td></tr
+><tr
+id=sl_svn6_66><td class="source">    * [Links Useful Links]<br></td></tr
+><tr
+id=sl_svn6_67><td class="source"><br></td></tr
+><tr
+id=sl_svn6_68><td class="source">= To help us =<br></td></tr
+><tr
+id=sl_svn6_69><td class="source">    * Report bugs and ask questions by visiting the [http://code.google.com/p/kf-ray/issues/list KF-Ray Issue Tracker]. ** Bugs are filed [http://code.google.com/p/kf-ray/issues/entry here]<br></td></tr
+><tr
+id=sl_svn6_70><td class="source">    * Contribute to the development by helping fix bugs and adding new features<br></td></tr
+><tr
+id=sl_svn6_71><td class="source">    * Contribute to the documentation and translation in English<br></td></tr
+></table></pre>
+
+<pre class="prettyprint"><table width="100%"><tr class="cursor_stop cursor_hidden"><td></td></tr></table></pre>
+</td>
+</tr></table>
+
+
+
+ <div id="log">
+ <div style="text-align:right">
+ <a class="ifCollapse" href="#" onclick="_toggleMeta('kf-ray', this)">Show details</a>
+ <a class="ifExpand" href="#" onclick="_toggleMeta('kf-ray', this)">Hide details</a>
+ </div>
+ <div class="ifExpand">
+ 
+ <div class="pmeta_bubble_bg" style="border:1px solid white">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <div id="changelog">
+ <p>Change log</p>
+ <div>
+ <a href="/p/kf-ray/source/detail?spec=svn6&r=1">r1</a>
+ by Florian.coin
+ on Yesterday (30 hours ago)
+ &nbsp; <a href="/p/kf-ray/source/diff?spec=svn6&r=1&amp;format=side&amp;path=/wiki/Welcome.wiki&amp;old_path=/wiki/Welcome.wiki&amp;old=">Diff</a>
+ </div>
+ <pre>Release v1.0.1</pre>
+ </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ <script type="text/javascript">
+ var detail_url = '/p/kf-ray/source/detail?r=1&spec=svn6';
+ var publish_url = '/p/kf-ray/source/detail?r=1&spec=svn6#publish';
+ // describe the paths of this revision in javascript.
+ var changed_paths = [];
+ var changed_urls = [];
+ 
+ changed_paths.push('/branches');
+ changed_urls.push('/p/kf-ray/source/browse/branches?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/tags');
+ changed_urls.push('/p/kf-ray/source/browse/tags?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk');
+ changed_urls.push('/p/kf-ray/source/browse/trunk?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/AUTHORS');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/AUTHORS?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/COPYING');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/COPYING?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/Makefile.am');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/Makefile.am?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/README');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/README?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/autogen.sh');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/autogen.sh?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/configure.in');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/configure.in?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/doc');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/doc?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/po');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/po?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/po/POTFILES.in');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/po/POTFILES.in?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/scenes');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/scenes?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/scenes/images');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/scenes/images?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/scenes/scene1.kfr');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/scenes/scene1.kfr?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/scenes/scene2.kfr');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/scenes/scene2.kfr?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/scenes/scene3.kfr');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/scenes/scene3.kfr?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/scenes/scene4.kfr');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/scenes/scene4.kfr?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/scenes/scene5.kfr');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/scenes/scene5.kfr?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/scenes/scene6.kfr');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/scenes/scene6.kfr?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/scenes/scene7.kfr');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/scenes/scene7.kfr?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/scenes/scenevide.kfr');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/scenes/scenevide.kfr?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/src');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/src?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/src/Makefile.am');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/src/Makefile.am?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/src/arguments.c');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/src/arguments.c?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/src/arguments.h');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/src/arguments.h?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/src/bhost');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/src/bhost?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/src/frontend');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/src/frontend?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/src/frontend/Makefile');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/src/frontend/Makefile?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/src/frontend/callbacks.c');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/src/frontend/callbacks.c?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/src/frontend/callbacks.h');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/src/frontend/callbacks.h?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/src/frontend/functions.c');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/src/frontend/functions.c?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/src/frontend/functions.h');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/src/frontend/functions.h?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/src/frontend/interface.c');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/src/frontend/interface.c?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/src/frontend/interface.h');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/src/frontend/interface.h?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/src/frontend/kfray.glade');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/src/frontend/kfray.glade?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/src/frontend/kfray.gladep');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/src/frontend/kfray.gladep?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/src/frontend/main_gui.c');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/src/frontend/main_gui.c?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/src/frontend/main_gui.h');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/src/frontend/main_gui.h?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/src/frontend/support.c');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/src/frontend/support.c?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/src/frontend/support.h');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/src/frontend/support.h?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/src/loader');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/src/loader?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/src/loader/Makefile.am');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/src/loader/Makefile.am?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/src/loader/loader.c');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/src/loader/loader.c?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/src/loader/loader.h');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/src/loader/loader.h?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/src/loader/parser_lex.l');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/src/loader/parser_lex.l?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/src/loader/parser_yy.y');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/src/loader/parser_yy.y?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/src/main.c');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/src/main.c?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/src/main.h');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/src/main.h?r=1&spec=svn6');
+ 
+ 
+ changed_paths.push('/trunk/src/mainpage.h');
+ changed_urls.push('/p/kf-ray/source/browse/trunk/src/mainpage.h?r=1&spec=svn6');
+ 
+ 
+ function getCurrentPageIndex() {
+ for (var i = 0; i < changed_paths.length; i++) {
+ if (selected_path == changed_paths[i]) {
+ return i;
+ }
+ }
+ }
+ function getNextPage() {
+ var i = getCurrentPageIndex();
+ if (i < changed_paths.length - 1) {
+ return changed_urls[i + 1];
+ }
+ return null;
+ }
+ function getPreviousPage() {
+ var i = getCurrentPageIndex();
+ if (i > 0) {
+ return changed_urls[i - 1];
+ }
+ return null;
+ }
+ function gotoNextPage() {
+ var page = getNextPage();
+ if (!page) {
+ page = detail_url;
+ }
+ window.location = page;
+ }
+ function gotoPreviousPage() {
+ var page = getPreviousPage();
+ if (!page) {
+ page = detail_url;
+ }
+ window.location = page;
+ }
+ function gotoDetailPage() {
+ window.location = detail_url;
+ }
+ function gotoPublishPage() {
+ window.location = publish_url;
+ }
+</script>
+ 
+ <style type="text/css">
+ #review_nav {
+ border-top: 3px solid white;
+ padding-top: 6px;
+ margin-top: 1em;
+ }
+ #review_nav td {
+ vertical-align: middle;
+ }
+ #review_nav select {
+ margin: .5em 0;
+ }
+ </style>
+ <div id="review_nav">
+ <table><tr><td>Go to:&nbsp;</td><td>
+ <select name="files_in_rev" onchange="window.location=this.value">
+ 
+ <option value="/p/kf-ray/source/browse/branches?r=1&amp;spec=svn6"
+ 
+ >/branches</option>
+ 
+ <option value="/p/kf-ray/source/browse/tags?r=1&amp;spec=svn6"
+ 
+ >/tags</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk?r=1&amp;spec=svn6"
+ 
+ >/trunk</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/AUTHORS?r=1&amp;spec=svn6"
+ 
+ >/trunk/AUTHORS</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/COPYING?r=1&amp;spec=svn6"
+ 
+ >/trunk/COPYING</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/Makefile.am?r=1&amp;spec=svn6"
+ 
+ >/trunk/Makefile.am</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/README?r=1&amp;spec=svn6"
+ 
+ >/trunk/README</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/autogen.sh?r=1&amp;spec=svn6"
+ 
+ >/trunk/autogen.sh</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/configure.in?r=1&amp;spec=svn6"
+ 
+ >/trunk/configure.in</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/doc?r=1&amp;spec=svn6"
+ 
+ >/trunk/doc</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/po?r=1&amp;spec=svn6"
+ 
+ >/trunk/po</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/po/POTFILES.in?r=1&amp;spec=svn6"
+ 
+ >/trunk/po/POTFILES.in</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/scenes?r=1&amp;spec=svn6"
+ 
+ >/trunk/scenes</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/scenes/images?r=1&amp;spec=svn6"
+ 
+ >/trunk/scenes/images</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/scenes/scene1.kfr?r=1&amp;spec=svn6"
+ 
+ >/trunk/scenes/scene1.kfr</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/scenes/scene2.kfr?r=1&amp;spec=svn6"
+ 
+ >/trunk/scenes/scene2.kfr</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/scenes/scene3.kfr?r=1&amp;spec=svn6"
+ 
+ >/trunk/scenes/scene3.kfr</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/scenes/scene4.kfr?r=1&amp;spec=svn6"
+ 
+ >/trunk/scenes/scene4.kfr</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/scenes/scene5.kfr?r=1&amp;spec=svn6"
+ 
+ >/trunk/scenes/scene5.kfr</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/scenes/scene6.kfr?r=1&amp;spec=svn6"
+ 
+ >/trunk/scenes/scene6.kfr</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/scenes/scene7.kfr?r=1&amp;spec=svn6"
+ 
+ >/trunk/scenes/scene7.kfr</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/scenes/scenevide.kfr?r=1&amp;spec=svn6"
+ 
+ >/trunk/scenes/scenevide.kfr</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/src?r=1&amp;spec=svn6"
+ 
+ >/trunk/src</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/src/Makefile.am?r=1&amp;spec=svn6"
+ 
+ >/trunk/src/Makefile.am</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/src/arguments.c?r=1&amp;spec=svn6"
+ 
+ >/trunk/src/arguments.c</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/src/arguments.h?r=1&amp;spec=svn6"
+ 
+ >/trunk/src/arguments.h</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/src/bhost?r=1&amp;spec=svn6"
+ 
+ >/trunk/src/bhost</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/src/frontend?r=1&amp;spec=svn6"
+ 
+ >/trunk/src/frontend</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/src/frontend/Makefile?r=1&amp;spec=svn6"
+ 
+ >/trunk/src/frontend/Makefile</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/src/frontend/callbacks.c?r=1&amp;spec=svn6"
+ 
+ >/trunk/src/frontend/callbacks.c</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/src/frontend/callbacks.h?r=1&amp;spec=svn6"
+ 
+ >/trunk/src/frontend/callbacks.h</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/src/frontend/functions.c?r=1&amp;spec=svn6"
+ 
+ >/trunk/src/frontend/functions.c</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/src/frontend/functions.h?r=1&amp;spec=svn6"
+ 
+ >/trunk/src/frontend/functions.h</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/src/frontend/interface.c?r=1&amp;spec=svn6"
+ 
+ >/trunk/src/frontend/interface.c</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/src/frontend/interface.h?r=1&amp;spec=svn6"
+ 
+ >/trunk/src/frontend/interface.h</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/src/frontend/kfray.glade?r=1&amp;spec=svn6"
+ 
+ >/trunk/src/frontend/kfray.glade</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/src/frontend/kfray.gladep?r=1&amp;spec=svn6"
+ 
+ >/trunk/src/frontend/kfray.gladep</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/src/frontend/main_gui.c?r=1&amp;spec=svn6"
+ 
+ >/trunk/src/frontend/main_gui.c</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/src/frontend/main_gui.h?r=1&amp;spec=svn6"
+ 
+ >/trunk/src/frontend/main_gui.h</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/src/frontend/support.c?r=1&amp;spec=svn6"
+ 
+ >/trunk/src/frontend/support.c</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/src/frontend/support.h?r=1&amp;spec=svn6"
+ 
+ >/trunk/src/frontend/support.h</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/src/loader?r=1&amp;spec=svn6"
+ 
+ >/trunk/src/loader</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/src/loader/Makefile.am?r=1&amp;spec=svn6"
+ 
+ >/trunk/src/loader/Makefile.am</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/src/loader/loader.c?r=1&amp;spec=svn6"
+ 
+ >/trunk/src/loader/loader.c</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/src/loader/loader.h?r=1&amp;spec=svn6"
+ 
+ >/trunk/src/loader/loader.h</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/src/loader/parser_lex.l?r=1&amp;spec=svn6"
+ 
+ >/trunk/src/loader/parser_lex.l</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/src/loader/parser_yy.y?r=1&amp;spec=svn6"
+ 
+ >/trunk/src/loader/parser_yy.y</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/src/main.c?r=1&amp;spec=svn6"
+ 
+ >/trunk/src/main.c</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/src/main.h?r=1&amp;spec=svn6"
+ 
+ >/trunk/src/main.h</option>
+ 
+ <option value="/p/kf-ray/source/browse/trunk/src/mainpage.h?r=1&amp;spec=svn6"
+ 
+ >/trunk/src/mainpage.h</option>
+ 
+ </select>
+ </td></tr></table>
+ 
+ 
+ 
+ <div id="review_instr" class="closed">
+ <a class="ifOpened" href="/p/kf-ray/source/detail?r=1&spec=svn6#publish">Publish your comments</a>
+ <div class="ifClosed">Double click a line to add a comment</div>
+ </div>
+ 
+ </div>
+ 
+ 
+ </div>
+ <div class="round1"></div>
+ <div class="round2"></div>
+ <div class="round4"></div>
+ </div>
+ <div class="pmeta_bubble_bg" style="border:1px solid white">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <div id="older_bubble">
+ <p>Older revisions</p>
+ 
+ <a href="/p/kf-ray/source/list?path=/wiki/Welcome.wiki&start=1">All revisions of this file</a>
+ </div>
+ </div>
+ <div class="round1"></div>
+ <div class="round2"></div>
+ <div class="round4"></div>
+ </div>
+ <div class="pmeta_bubble_bg" style="border:1px solid white">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <div id="fileinfo_bubble">
+ <p>File info</p>
+ 
+ <div>Size: 2375 bytes,
+ 71 lines</div>
+ 
+ <div><a href="http://kf-ray.googlecode.com/svn-history/r6/wiki/Welcome.wiki">View raw file</a></div>
+ </div>
+ 
+ <div id="props">
+ <p>File properties</p>
+ <dl>
+ 
+ <dt>svn:executable</dt>
+ <dd>*</dd>
+ 
+ </dl>
+ </div>
+ 
+ </div>
+ <div class="round1"></div>
+ <div class="round2"></div>
+ <div class="round4"></div>
+ </div>
+ </div>
+ </div>
+
+
+</div>
+</div>
+
+ <script src="http://www.gstatic.com/codesite/ph/2012628327598470277/js/prettify/prettify.js"></script>
+
+ <script src="http://www.gstatic.com/codesite/ph/2012628327598470277/js/prettify/lang-wiki.js"></script>
+
+<script type="text/javascript">prettyPrint();</script>
+
+<script src="http://www.gstatic.com/codesite/ph/2012628327598470277/js/source_file_scripts_20080115.js"></script>
+
+ <script type="text/javascript" src="http://kibbles.googlecode.com/files/kibbles-1.3.1.comp.js"></script>
+ <script type="text/javascript">
+ var lastStop = null;
+ var initilized = false;
+ 
+ function updateCursor(next, prev) {
+ if (prev && prev.element) {
+ prev.element.className = 'cursor_stop cursor_hidden';
+ }
+ if (next && next.element) {
+ next.element.className = 'cursor_stop cursor';
+ lastStop = next.index;
+ }
+ }
+ 
+ function pubRevealed(data) {
+ updateCursorForCell(data.cellId, 'cursor_stop cursor_hidden');
+ if (initilized) {
+ reloadCursors();
+ }
+ }
+ 
+ function draftRevealed(data) {
+ updateCursorForCell(data.cellId, 'cursor_stop cursor_hidden');
+ if (initilized) {
+ reloadCursors();
+ }
+ }
+ 
+ function draftDestroyed(data) {
+ updateCursorForCell(data.cellId, 'nocursor');
+ if (initilized) {
+ reloadCursors();
+ }
+ }
+ function reloadCursors() {
+ kibbles.skipper.reset();
+ loadCursors();
+ if (lastStop != null) {
+ kibbles.skipper.setCurrentStop(lastStop);
+ }
+ }
+ // possibly the simplest way to insert any newly added comments
+ // is to update the class of the corresponding cursor row,
+ // then refresh the entire list of rows.
+ function updateCursorForCell(cellId, className) {
+ var cell = document.getElementById(cellId);
+ // we have to go two rows back to find the cursor location
+ var row = getPreviousElement(cell.parentNode);
+ row.className = className;
+ }
+ // returns the previous element, ignores text nodes.
+ function getPreviousElement(e) {
+ var element = e.previousSibling;
+ if (element.nodeType == 3) {
+ element = element.previousSibling;
+ }
+ if (element && element.tagName) {
+ return element;
+ }
+ }
+ function loadCursors() {
+ // register our elements with skipper
+ var elements = CR_getElements('*', 'cursor_stop');
+ var len = elements.length;
+ for (var i = 0; i < len; i++) {
+ var element = elements[i]; 
+ element.className = 'cursor_stop cursor_hidden';
+ kibbles.skipper.append(element);
+ }
+ }
+ function toggleComments() {
+ CR_toggleCommentDisplay();
+ reloadCursors();
+ }
+ function keysOnLoadHandler() {
+ // setup skipper
+ kibbles.skipper.addStopListener(
+ kibbles.skipper.LISTENER_TYPE.PRE, updateCursor);
+ // Set the 'offset' option to return the middle of the client area
+ // an option can be a static value, or a callback
+ kibbles.skipper.setOption('padding_top', 50);
+ // Set the 'offset' option to return the middle of the client area
+ // an option can be a static value, or a callback
+ kibbles.skipper.setOption('padding_bottom', 100);
+ // Register our keys
+ kibbles.skipper.addFwdKey("n");
+ kibbles.skipper.addRevKey("p");
+ kibbles.keys.addKeyPressListener(
+ 'u', function() { window.location = detail_url; });
+ kibbles.keys.addKeyPressListener(
+ 'r', function() { window.location = detail_url + '#publish'; });
+ 
+ kibbles.keys.addKeyPressListener('j', gotoNextPage);
+ kibbles.keys.addKeyPressListener('k', gotoPreviousPage);
+ 
+ 
+ kibbles.keys.addKeyPressListener('h', toggleComments);
+ 
+ }
+ window.onload = function() {keysOnLoadHandler();};
+ </script>
+
+
+<!-- code review support -->
+<script src="http://www.gstatic.com/codesite/ph/2012628327598470277/js/code_review_scripts_20081023.js"></script>
+<script type="text/javascript">
+ 
+ // the comment form template
+ var form = '<div class="draft"><div class="header"><span class="title">Draft comment:</span></div>' +
+ '<div class="body"><form onsubmit="return false;"><textarea id="$ID">$BODY</textarea><br>$ACTIONS</form></div>' +
+ '</div>';
+ // the comment "plate" template used for both draft and published comment "plates".
+ var draft_comment = '<div class="draft" ondblclick="$ONDBLCLICK">' +
+ '<div class="header"><span class="title">Draft comment:</span><span class="actions">$ACTIONS</span></div>' +
+ '<pre id="$ID" class="body">$BODY</pre>' +
+ '</div>';
+ var published_comment = '<div class="published">' +
+ '<div class="header"><span class="title"><a href="$PROFILE_URL">$AUTHOR:</a></span><div>' +
+ '<pre id="$ID" class="body">$BODY</pre>' +
+ '</div>';
+
+ function showPublishInstructions() {
+ var element = document.getElementById('review_instr');
+ if (element) {
+ element.className = 'opened';
+ }
+ }
+ function revsOnLoadHandler() {
+ // register our source container with the commenting code
+ var paths = {'svn6': '/wiki/Welcome.wiki'}
+ _setup('kf-ray', 'svn6', paths, 'b818d37e113cb208cd267f6385c07459',
+ CR_BrowseIntegrationFactory);
+ // register our hidden ui elements with the code commenting code ui builder.
+ CR_registerLayoutElement('form', form);
+ CR_registerLayoutElement('draft_comment', draft_comment);
+ CR_registerLayoutElement('published_comment', published_comment);
+ 
+ // register our source container with the commenting code
+ // in this case we're registering the container and the revison
+ // associated with the contianer which may be the primary revision
+ // or may be a previous revision against which the primary revision
+ // of the file is being compared.
+ CR_registerSourceContainer(document.getElementById('lines'), 'svn6');
+ 
+ CR_registerActivityListener(CR_ACTIVITY_TYPE.REVEAL_DRAFT_PLATE, showPublishInstructions);
+ 
+ CR_registerActivityListener(CR_ACTIVITY_TYPE.REVEAL_PUB_PLATE, pubRevealed);
+ CR_registerActivityListener(CR_ACTIVITY_TYPE.REVEAL_DRAFT_PLATE, draftRevealed);
+ CR_registerActivityListener(CR_ACTIVITY_TYPE.DISCARD_DRAFT_COMMENT, draftDestroyed);
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ var initilized = true;
+ reloadCursors();
+ }
+ window.onload = function() {keysOnLoadHandler(); revsOnLoadHandler();};
+</script>
+
+<script type="text/javascript" src="http://www.gstatic.com/codesite/ph/2012628327598470277/js/dit_scripts_20081013.js"></script>
+
+ 
+ <script type="text/javascript" src="http://www.gstatic.com/codesite/ph/2012628327598470277/js/core_scripts_20081103.js"></script>
+ <script type="text/javascript" src="/js/codesite_product_dictionary_ph.pack.04102009.js"></script>
+ 
+ 
+ 
+ </div>
+<div id="footer" dir="ltr">
+ 
+ <div class="text">
+ 
+ &copy;2009 Google -
+ <a href="/">Code Home</a> -
+ <a href="/tos.html">Terms of Service</a> -
+ <a href="http://www.google.com/privacy.html">Privacy Policy</a> -
+ <a href="/more/">Site Directory</a> -
+ <a href="/p/support/">Project Hosting Help</a>
+ 
+ </div>
+</div>
+<script type="text/javascript">
+/**
+ * Reports analytics.
+ * It checks for the analytics functionality (window._gat) every 100ms
+ * until the analytics script is fully loaded in order to invoke siteTracker.
+ */
+function _CS_reportAnalytics() {
+ window.setTimeout(function() {
+ if (window._gat) {
+ try {
+ siteTracker = _gat._getTracker(CS_ANALYTICS_ACCOUNT);
+ siteTracker._trackPageview();
+ } catch (e) {}
+ 
+ } else {
+ _CS_reportAnalytics();
+ }
+ }, 100);
+}
+</script>
+
+ 
+ 
+ <div class="hostedBy" style="margin-top: -20px;">
+ <span style="vertical-align: top;">Hosted by</span>
+ <a href="/hosting/">
+ <img src="http://www.gstatic.com/codesite/ph/images/google_code_tiny.gif" width="107" height="24" alt="Google Code">
+ </a>
+ </div>
+ 
+ 
+ 
+ 
+
+
+ 
+ </body>
+</html>
+
+
+<script language='javascript'>postamble();</script>
