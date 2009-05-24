@@ -73,30 +73,48 @@ int		LookArguments(int argc, char **argv, t_arguments arg_main)
 		// Juste pour respecter les règles.
 		switch (optchar)
 		{
-			case 'i':	OptScn(arg_main.scn_name, arg_main.img_name, optarg); break;
+			case 'i':
+				OptScn(arg_main.scn_name, arg_main.img_name, optarg);
+				break;
 
-			case 'o':	OptImg(arg_main.img_name, optarg); break;
+			case 'o':	
+				OptImg(arg_main.img_name, optarg);
+				break;
 
-			case 'h':	return OptHelp();
+			case 'h':
+				return OptHelp();
 
-			case 'c':	return OptClean();
+			case 'c':
+				return OptClean();
 
-			case 'a':	OptAliasing(arg_main.opt_aliasing); break;
+			case 'a':
+				OptAliasing(arg_main.opt_aliasing);
+				break;
 
-			case 'd':	OptDisplay(arg_main.opt_display); break;
+			case 'd':
+				OptDisplay(arg_main.opt_display); break;
 
-			case 'b':	if(!OptBrdf(arg_main.model_brdf, optarg))
-						return OPT_STOP; break;
+			case 'b':
+				if(!OptBrdf(arg_main.model_brdf, optarg))
+				return OPT_STOP;
+				
+			case 't':
+				OptTexture(arg_main.model_texture);
+				break;
 
-			case 't':	OptTexture(arg_main.model_texture); break;
+			case 'l':
+				OptLines(arg_main.n_lines, optarg);
+				break;
 
-			case 'l':	OptLines(arg_main.n_lines, optarg); break;
+			case 'v':
+				OptView(arg_main.cam_move, optarg);
+				break;
 
-			case 'v':	OptView(arg_main.cam_move, optarg); break;
+			case '?':
+				return OptUnknown(argv[0]);
 
-			case '?':	return OptUnknown(argv[0]);
-
-			default : 	break;
+			default : 
+				break;
 		}
 	}
 
