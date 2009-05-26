@@ -38,7 +38,8 @@
 t_arguments	CreateArg	(char *scn_name0, char *img_name0,
 				int *model_brdf0, int *model_texture0,
 				int *n_lines0, int *opt_display0,
-				int *opt_aliasing0, float *cam_move0)
+				int *opt_aliasing0, float *cam_move0,
+				int *mist0)
 {
 	t_arguments arg_main;
 
@@ -50,6 +51,7 @@ t_arguments	CreateArg	(char *scn_name0, char *img_name0,
 	arg_main.opt_display = opt_display0;
 	arg_main.opt_aliasing = opt_aliasing0;
 	arg_main.cam_move = cam_move0;
+	arg_main.mist = mist0;
 
 	return	arg_main;
 }
@@ -67,7 +69,7 @@ int		LookArguments(int argc, char **argv, t_arguments arg_main)
 	int	optchar;
 
 	// Rappel i: un argument h sans argument t:: argument optionnel
-	while ((optchar = getopt (argc, argv, "i:o:h c b:t l:v:a d ")) != -1)
+	while ((optchar = getopt (argc, argv, "i:o:h c b:t l:v:m:a d ")) != -1)
 	{
 		// Normalement on indente pas comme ça mais c'est ridicule de créer une autre fonction pour ça
 		// Juste pour respecter les règles.
@@ -77,7 +79,7 @@ int		LookArguments(int argc, char **argv, t_arguments arg_main)
 				OptScn(arg_main.scn_name, arg_main.img_name, optarg);
 				break;
 
-			case 'o':	
+			case 'o':
 				OptImg(arg_main.img_name, optarg);
 				break;
 
@@ -97,7 +99,7 @@ int		LookArguments(int argc, char **argv, t_arguments arg_main)
 			case 'b':
 				if(!OptBrdf(arg_main.model_brdf, optarg))
 				return OPT_STOP;
-				
+
 			case 't':
 				OptTexture(arg_main.model_texture);
 				break;
@@ -109,11 +111,14 @@ int		LookArguments(int argc, char **argv, t_arguments arg_main)
 			case 'v':
 				OptView(arg_main.cam_move, optarg);
 				break;
+			case 'm':
+				OptMist(arg_main.mist, optarg);
+				break;
 
 			case '?':
 				return OptUnknown(argv[0]);
 
-			default : 
+			default :
 				break;
 		}
 	}
@@ -254,6 +259,13 @@ int		OptView(float *cam_move, char *optarg)
 {
 
 	*cam_move = atof(optarg);
+
+	return	OPT_CONTINUE;
+}
+
+int		OptMist(int *mist, char *optarg)
+{
+	*mist = atof(optarg);
 
 	return	OPT_CONTINUE;
 }

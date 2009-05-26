@@ -2,6 +2,23 @@
 #define EFFECTS_H_
 
 /**
+ * \enum	enum
+ * \brief	Types de brouillards
+ *
+ * Différents types de brouillard
+ *
+ */
+typedef enum
+{
+
+	MIST_LINEAR,	/*!< Brouillard linéaire 		*/
+	MIST_EXP,	/*!< Brouillard exponentielle		*/
+	MIST_EXP_SQUARE	/*!< Brouillard exponentielle carré	*/
+
+} e_mist;
+
+
+/**
  * \file	effects.h
  * \brief	Effets supplémentaires (BumpMapping)
  * \author	Karin Ait-Si-Amer et Florian Dang
