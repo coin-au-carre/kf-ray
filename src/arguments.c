@@ -39,7 +39,7 @@ t_arguments	CreateArg	(char *scn_name0, char *img_name0,
 				int *model_brdf0, int *model_texture0,
 				int *n_lines0, int *opt_display0,
 				int *opt_aliasing0, float *cam_move0,
-				int *mist0)
+				int *opt_mist0)
 {
 	t_arguments arg_main;
 
@@ -51,7 +51,7 @@ t_arguments	CreateArg	(char *scn_name0, char *img_name0,
 	arg_main.opt_display = opt_display0;
 	arg_main.opt_aliasing = opt_aliasing0;
 	arg_main.cam_move = cam_move0;
-	arg_main.mist = mist0;
+	arg_main.opt_mist = opt_mist0;
 
 	return	arg_main;
 }
@@ -94,7 +94,8 @@ int		LookArguments(int argc, char **argv, t_arguments arg_main)
 				break;
 
 			case 'd':
-				OptDisplay(arg_main.opt_display); break;
+				OptDisplay(arg_main.opt_display);
+				break;
 
 			case 'b':
 				if(!OptBrdf(arg_main.model_brdf, optarg))
@@ -112,7 +113,7 @@ int		LookArguments(int argc, char **argv, t_arguments arg_main)
 				OptView(arg_main.cam_move, optarg);
 				break;
 			case 'm':
-				OptMist(arg_main.mist, optarg);
+				OptMist(arg_main.opt_mist, optarg);
 				break;
 
 			case '?':
@@ -177,7 +178,8 @@ int		OptImg(char *img_name, char *optarg)
 
 int		OptHelp(void)
 {
-	printf("%s", help);
+	printf(usage);
+	printf(help);
 
 	return OPT_STOP;
 }
@@ -221,9 +223,9 @@ int		OptBrdf(int *model_brdf, char *optarg)
 		*model_brdf = atoi(optarg);
 	else
 	{
-		printf("L'option -b doit avoir un argument compris entre 0 et 3.\n");
-		printf ("Utilisation : kfray [-i Scene] [-o Image] ");
-		printf("[-b Modele] [-v Distance] [-t] [-a] [-l Lignes] [-d]\n");
+		printf("L'option -b doit avoir un argument compris entre 1 et 3\n");
+		printf(usage);
+
 		return OPT_STOP;
 	}
 
@@ -246,7 +248,7 @@ int		OptLines(int *n_lines, char *optarg)
 	else
 	{
 		printf("L'option -l doit avoir un argument compris entre 1 et le hauteur de l'image\n");
-		printf ("Utilisation : kfray [-i Scene] [-o Image] [-b Modele] [-v Distance] [-t] [-a] [-l Lignes] [-d]\n");
+		printf(usage);
 
 		return OPT_STOP;
 	}
@@ -257,15 +259,14 @@ int		OptLines(int *n_lines, char *optarg)
 
 int		OptView(float *cam_move, char *optarg)
 {
-
 	*cam_move = atof(optarg);
 
 	return	OPT_CONTINUE;
 }
 
-int		OptMist(int *mist, char *optarg)
+int		OptMist(int *opt_mist, char *optarg)
 {
-	*mist = atof(optarg);
+	*opt_mist = atoi(optarg);
 
 	return	OPT_CONTINUE;
 }
@@ -274,7 +275,7 @@ int		OptMist(int *mist, char *optarg)
 int		OptUnknown(char *prgm_name)
 {
 	printf ("KF-Ray - commande inconnue...\n");
-	printf ("Utilisation : %s [-i Scene] [-o Image] [-b Modele] [-t] [-a] [-l Lignes] [-d]\n", prgm_name);
+	printf(usage);
 	printf ("Pour afficher l'aide : %s -h\n", prgm_name);
 
 	return	OPT_STOP;

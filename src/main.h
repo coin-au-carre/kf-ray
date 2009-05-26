@@ -65,8 +65,7 @@ int 	main(int argc, char* argv[]);
  */
 int 	CallRaytracer	(t_scene scn, int opt_display,
 			char *img_name, int n_proc,
-			int rank, int n_lines,
-			int mist);
+			int rank, int n_lines);
 
 
 

@@ -1,6 +1,7 @@
 #ifndef EFFECTS_H_
 #define EFFECTS_H_
 
+
 /**
  * \enum	enum
  * \brief	Types de brouillards
@@ -11,6 +12,7 @@
 typedef enum
 {
 
+	MIST_NONE,	/*!< Sans brouillard	 		*/
 	MIST_LINEAR,	/*!< Brouillard linéaire 		*/
 	MIST_EXP,	/*!< Brouillard exponentielle		*/
 	MIST_EXP_SQUARE	/*!< Brouillard exponentielle carré	*/

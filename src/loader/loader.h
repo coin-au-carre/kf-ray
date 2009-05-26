@@ -39,7 +39,8 @@
  * \return	Une scène 3D
  */
 t_scene 	Loader		(char *scn_name, int model_brdf,
-				int model_texture, int opt_aliasing, float cam_move);
+				int model_texture, int opt_aliasing,
+				float cam_move, int opt_mist);
 
 /**
  * \fn 		t_scene 	LoadDefaultScn	(int model_brdf, int model_texture,

@@ -33,7 +33,7 @@
 
 t_scene			Loader		(char *scn_name, int model_brdf,
 					int model_texture, int opt_aliasing,
-					float cam_move)
+					float cam_move, int opt_mist)
 {
 	t_scene		scn;
 	t_options	options;
@@ -44,6 +44,10 @@ t_scene			Loader		(char *scn_name, int model_brdf,
 							// 3 avec Lambert + Blinn-Phong
 	options.model_texture = model_texture;		// Texture ou pas
 	options.opt_aliasing = opt_aliasing;		// Activation/désactivation anti aliasing
+	options.opt_mist = opt_mist;			// 0 sans effet brouillard
+							// 1 brouillard linéaire
+							// 2 brouillard exponentiel
+							// 3 brouillard exponentiel carré
 
 	if (strcmp(scn_name,"") == 0)
 		scn = LoadDefaultScn(model_brdf, model_texture, opt_aliasing);
@@ -67,7 +71,9 @@ t_scene			Loader		(char *scn_name, int model_brdf,
 	scn.sph[3].center.y += 3.0*cam_move;
 	scn.sph[5].center.y -= cam_move;
 	*/
-	
+
+	scn.options = options;		// Oublie de cette ligne dans la release 1.0.1 -_-
+
 	return 		scn;
 }
 

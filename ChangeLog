@@ -1,3 +1,10 @@
+v1.0.2
+------
+* Ajout mist (brouillard)
+* Correction options arguments backend
+* Retouche affichage usage help
+
+
 Release v1.0.1 
 --------------
 * Corrections parallélisation MPI

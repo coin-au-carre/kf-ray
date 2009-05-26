@@ -40,6 +40,17 @@
 void	Raytracer(t_scene scn, char *img_name);
 
 
+/**
+ * \fn 		void	*ComputePixel(t_scene scn, unsigned char *image, int x, int y);
+ * \brief 	Fonction principale du raytracing
+ *
+ * \param 	scn		La scène 3D
+ * \param 	image		Tableau image
+ * \param 	x		Coordonnées x par rapport à la scène
+ * \param 	y		Coordonnées y par rapport à la scène
+ *
+ * \return 	Néant.
+ */
 void	*ComputePixel(t_scene scn, unsigned char *image, int x, int y);
 
 

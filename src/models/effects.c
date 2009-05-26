@@ -59,18 +59,14 @@ t_vector BumpMapping(t_vector vect_normal, t_vector point_intersect, float bump)
 
 float	*Mist(t_scene scn, t_vector point_intersect, float *RGB)
 {
-	e_mist TYPE_MIST = MIST_EXP_SQUARE;
-	int k;
+	e_mist	TYPE_MIST = scn.options.opt_mist;
+	int	k;
 
-	float RGB_mist[] = { MAX_COLOR - 20000.0f, MAX_COLOR - 20000.0f, MAX_COLOR - 20000.0f };
-	float dist_mist = 1800.0f;
+	float RGB_mist[] = { MAX_COLOR - 10000.0f, MAX_COLOR - 10000.0f, MAX_COLOR - 10000.0f };
+	float dist_mist = 2800.0f;
 
 	float dist_object = sqrtf(DotProd(point_intersect, point_intersect));
 	float rapport_dist = dist_object/dist_mist;
-
-//	printf("Vector = ");
-//	PrintVect(point_intersect);
-//	printf(" Distance = %f\n", dist_object);
 
 //	if (rapport_dist < 0.0f)
 //		fprintf(stderr, "!Warning : Rapport distance mist negatif\n");
@@ -83,17 +79,22 @@ float	*Mist(t_scene scn, t_vector point_intersect, float *RGB)
 				//RGB[k] = RGB_mist[k] * rapport_dist + RGB[k] * (1.0f - MAX(rapport_dist, 1.0f));
 				RGB[k] = RGB_mist[k] * rapport_dist + RGB[k] * (1.0f - MIN(rapport_dist, 1.0f));
 			break;
+
 		case MIST_EXP:
 			for (k=0; k<3; k++)
-				RGB[k] = RGB_mist[k] * (1.0f - expf(-rapport_dist)) + RGB[k] * expf(-rapport_dist);
+				RGB[k] = RGB_mist[k] * (1.0f - expf(-rapport_dist)) +
+					 RGB[k] * expf(-rapport_dist);
 			break;
+
 		case MIST_EXP_SQUARE:
 			for (k=0; k<3; k++)
 				RGB[k] = RGB_mist[k] * (1.0f - expf(-rapport_dist*rapport_dist)) +
 					 RGB[k] * expf(-rapport_dist * rapport_dist);
 			break;
+
 		default:
 			break;
 	}
+
 	return RGB;
 }
