@@ -15,6 +15,7 @@
 #include "brdf.h"
 #include "../textures/procedural.h"
 #include "../misc/misc.h"
+#include "effects.h"
 
 #if OMBRAGE
 #include "../raycaster/intersections.h"
@@ -68,7 +69,8 @@ float		*Brdf(t_scene scn, t_brdf struct_brdf, float *t, float *RGB)
 		}
 	}
 
-	Mist(scn, struct_brdf.point_intersect, RGB);
+	if (scn.options.opt_mist != MIST_NONE)
+		Mist(scn, struct_brdf.point_intersect, RGB);
 
 	for (k = 0; k < 3; k++)
 		RGB[k] = MIN(RGB[k], MAX_COLOR);

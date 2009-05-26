@@ -88,6 +88,7 @@ typedef struct 	s_options
 	int	model_brdf;
 	int	model_texture;
 	int	opt_aliasing;
+	int	opt_mist;
 
 } t_options;
 

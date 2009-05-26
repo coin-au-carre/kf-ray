@@ -26,9 +26,8 @@
 #define OPT_STOP	0
 #define OPT_CONTINUE	1
 
+
 static const char help[] = "\
-Usage :\n\
-kfray [-i Scene] [-o Image] [-b Modele] [-t] [-a] [-l Lignes] [-d]\n\
 \n\
 Options :\n\
  -i Scene	: Nom du fichier de description 3D de la scène à charger \n\
@@ -37,6 +36,10 @@ Options :\n\
 							1 Lambert\n\
 							2 Phong\n\
 							3 Blinn-Phong\n\
+ -m Brouillard	: Modele de brouillard à utiliser :	0 Pas de brouillard\n\
+							1 Brouillard linéaire\n\
+							2 Brouilllard exponentiel\n\
+							3 Brouillard exponentiel carré\n\
  -a		: Activation de l'anti-aliasing (ne prend pas d'argument)\n\
  -t		: Désactivation des textures (ne prend pas d'argument)\n\
  -l Lignes	: Nombre de lignes calculées par chaque processus \n\
@@ -52,6 +55,14 @@ Exemples d'exécution :\n\
  kfray -i exemple1 -o img1 -b 1 -t\n\
  mpirun -v -c 10 kfray -i example3 -o img3 -b 3 -l 12 -d\n\n\
 ";	/*!< Texte d'aide à afficher pour l'option -h */
+
+
+static const char usage[] = "\
+Usage :\n\
+kfray [-i Scene] [-o Image] [-b Modele]\
+[-v Distance] [-m Brouillard] [-t] [-a] [-l Lignes] [-d]\n\
+";	/*!< Texte d'utilisation de KF-Ray */
+
 
 /**
  * \struct	s_arguments
@@ -77,7 +88,7 @@ typedef struct s_arguments
 	int  	*opt_display;		/*!< Activation/désactivation du display avec ImageMagick */
 	int  	*opt_aliasing;		/*!< Activation/désactivation de l'anti-aliasing */
 	float	*cam_move;		/*!< Déplacement de la caméra par rapport au point de fuite */
-	int	*mist;
+	int	*opt_mist;		/*!< Effet brouillard */
 
 } t_arguments;
 
@@ -106,7 +117,7 @@ t_arguments	CreateArg	(char *scn_name0, char *img_name0,
 				int *model_brdf0, int *model_texture0,
 				int *n_lines0, int *opt_display0,
 				int *opt_aliasing0, float *cam_move0,
-				int *mist);
+				int *opt_mist);
 
 
 /**
@@ -264,6 +275,7 @@ int		OptLines(int *n_lines, char *optarg);
  */
 int		OptView(float *cam_move, char *optarg);
 
+
 /**
  * \fn 		int		OptMist(int *mist, char *optarg);
  * \brief 	Gère l'option -v.
@@ -275,7 +287,7 @@ int		OptView(float *cam_move, char *optarg);
  * \return	OPT_CONTINUE si l'on peut commencer le rendu <br>
  *		OPT_STOP sinon (argument prioritaire ou erreur de syntaxe dans le passage des arguments)
  */
-int		OptMist(int *mist, char *optarg);
+int		OptMist(int *opt_mist, char *optarg);
 
 
 /**

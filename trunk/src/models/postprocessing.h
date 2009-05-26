@@ -39,6 +39,7 @@
  */
 float	*AntiAliasing(t_scene scn, float *RGB, int x, int y);
 
+
 /**
  * \fn 		float	*GammaCorrection(float *RGB);
  * \brief 	Correction Gamma pour restitution sRGB.
@@ -50,5 +51,6 @@ float	*AntiAliasing(t_scene scn, float *RGB, int x, int y);
  * \return 	Néant.
  */
 float	*GammaCorrection(float *RGB);
+
 
 #endif /* POSTPROCESSING_H */
