@@ -50,7 +50,8 @@ int 	main(int argc, char* argv[]);
 
 
 /**
- * \fn 		int 	CallRaytracer(t_scene scn, int opt_display, char *img_name, int n_proc, int rank, int n_lines);
+ * \fn 		int 	CallRaytracer(t_scene scn, int opt_display, char *img_name,
+ *				int n_proc, int rank, int n_lines, int *mist);
  * \brief 	Appelle le raytracer sur le processus Maître ou sur les Slave si MPI est activé sur plusieurs processus
  *
  * \param	scn		Nom de la scène
@@ -63,7 +64,9 @@ int 	main(int argc, char* argv[]);
  * \return	0 si pas d'erreur
  */
 int 	CallRaytracer	(t_scene scn, int opt_display,
-			char *img_name, int n_proc, int rank, int n_lines);
+			char *img_name, int n_proc,
+			int rank, int n_lines,
+			int mist);
 
 
 

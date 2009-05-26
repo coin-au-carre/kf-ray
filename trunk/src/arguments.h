@@ -77,6 +77,7 @@ typedef struct s_arguments
 	int  	*opt_display;		/*!< Activation/désactivation du display avec ImageMagick */
 	int  	*opt_aliasing;		/*!< Activation/désactivation de l'anti-aliasing */
 	float	*cam_move;		/*!< Déplacement de la caméra par rapport au point de fuite */
+	int	*mist;
 
 } t_arguments;
 
@@ -85,7 +86,8 @@ typedef struct s_arguments
  * \fn 		t_arguments CreateArg	(char *scn_name0, char *img_name0,
  *					int *model_brdf0, int *model_texture0,
  *					int *n_lines0, int *opt_display0,
- *					int *opt_aliasing0, float *cam_move0);
+ *					int *opt_aliasing0, float *cam_move0
+ *					int *mist);
  * \brief 	Créé la structure s_arguments
  *
  * \param 	scn_name0	Nom de la scène 3D
@@ -103,7 +105,8 @@ typedef struct s_arguments
 t_arguments	CreateArg	(char *scn_name0, char *img_name0,
 				int *model_brdf0, int *model_texture0,
 				int *n_lines0, int *opt_display0,
-				int *opt_aliasing0, float *cam_move0);
+				int *opt_aliasing0, float *cam_move0,
+				int *mist);
 
 
 /**
@@ -260,6 +263,19 @@ int		OptLines(int *n_lines, char *optarg);
  *		OPT_STOP sinon (argument prioritaire ou erreur de syntaxe dans le passage des arguments)
  */
 int		OptView(float *cam_move, char *optarg);
+
+/**
+ * \fn 		int		OptMist(int *mist, char *optarg);
+ * \brief 	Gère l'option -v.
+ *		Précise la distance du point de fuite.
+ *
+ * \param 	cam_move	Déplacement de la caméra selon l'axe z
+ * \param	optarg		Argument passé par l'utilisateur
+ *
+ * \return	OPT_CONTINUE si l'on peut commencer le rendu <br>
+ *		OPT_STOP sinon (argument prioritaire ou erreur de syntaxe dans le passage des arguments)
+ */
+int		OptMist(int *mist, char *optarg);
 
 
 /**

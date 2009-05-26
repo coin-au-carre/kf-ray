@@ -56,6 +56,7 @@ int		main(int argc, char **argv)
 	int	n_lines = 10;			// Nombres lignes calculés par chaque processus slave
 	int	opt_display = 0;		// Lancement du display désactivé à la fin
 	float	cam_move = 0.0f;		// Distance du point de fuite supplémentaire (animation)
+	int	mist = 0;			// Type de brouillard
 	char	scn_name[MAX_FILE_LENGTH];	// Nom du fichier de scène
 	char	img_name[MAX_FILE_LENGTH];	// Nom de l'image final
 	strcpy(scn_name, "");			// Nom de fichier par défaut
@@ -72,19 +73,20 @@ int		main(int argc, char **argv)
 #endif
 
 	t_arguments arg_main = CreateArg(scn_name, img_name, &model_brdf, &model_texture,
-					&n_lines, &opt_display, &opt_aliasing, &cam_move);
+					&n_lines, &opt_display, &opt_aliasing, &cam_move, &mist);
 
 	if (!LookArguments(argc, argv, arg_main))
 		return 0;
 
 	t_scene	scn = Loader(scn_name, model_brdf, model_texture, opt_aliasing, cam_move);
 
-	return	CallRaytracer(scn, opt_display, img_name, n_proc, rank, n_lines);
+	return	CallRaytracer(scn, opt_display, img_name, n_proc, rank, n_lines, mist);
 }
 
 
 int		CallRaytracer	(t_scene scn, int opt_display,
-				char *img_name, int n_proc, int rank, int n_lines)
+				char *img_name, int n_proc, int rank,
+				int n_lines, int mist)
 {
 	// Debut du chronometrage
 	double	debut = my_gettimeofday();
