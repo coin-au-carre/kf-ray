@@ -71,8 +71,6 @@ int		LookArguments(int argc, char **argv, t_arguments arg_main)
 	// Rappel i: un argument h sans argument t:: argument optionnel
 	while ((optchar = getopt (argc, argv, "i:o:h c b:t l:v:m:a d ")) != -1)
 	{
-		// Normalement on indente pas comme ça mais c'est ridicule de créer une autre fonction pour ça
-		// Juste pour respecter les règles.
 		switch (optchar)
 		{
 			case 'i':
@@ -99,7 +97,8 @@ int		LookArguments(int argc, char **argv, t_arguments arg_main)
 
 			case 'b':
 				if(!OptBrdf(arg_main.model_brdf, optarg))
-				return OPT_STOP;
+					return OPT_STOP;
+				break;
 
 			case 't':
 				OptTexture(arg_main.model_texture);
@@ -112,6 +111,7 @@ int		LookArguments(int argc, char **argv, t_arguments arg_main)
 			case 'v':
 				OptView(arg_main.cam_move, optarg);
 				break;
+
 			case 'm':
 				OptMist(arg_main.opt_mist, optarg);
 				break;
@@ -192,7 +192,6 @@ int		OptClean(void)
 
 	sprintf(path, "rm ../scenes/images/*.ppm");
 
-	//execlp("/bin/sh", "/bin/sh", "-c", "rm *.ppm", NULL);
 	execlp("/bin/sh", "/bin/sh", "-c", path, NULL);
 
 	free(path);
