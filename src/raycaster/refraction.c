@@ -38,10 +38,12 @@
 
 
 
-float		*RefractionSph(t_scene scn, t_castray struct_cast, int object_current, float *t, float *RGB)
+float		*RefractionSph(	t_scene scn, t_castray struct_cast,
+							int object_current, float *t, float *RGB)
 {
 	// Point d'intersection et vecteur normal
-	t_vector	point_intersect = Addition(struct_cast.ray_cast->start, Prod(*t, struct_cast.ray_cast->dir));
+	t_vector	point_intersect = Addition(	struct_cast.ray_cast->start,
+											Prod(*t, struct_cast.ray_cast->dir));
 	t_vector	vect_normal = Substraction(point_intersect, scn.sph[object_current].center);
 	vect_normal = Normalize(vect_normal);
 
@@ -72,7 +74,8 @@ float		*RefractionSph(t_scene scn, t_castray struct_cast, int object_current, fl
 
 	// On envoie le rayon transmis
 	struct_cast.ray_cast->start = point_intersect;
-	struct_cast.ray_cast->dir = Substraction(Prod(index_refractive, struct_cast.ray_cast->dir), vect_temp);
+	struct_cast.ray_cast->dir = Substraction(	Prod(index_refractive,
+												struct_cast.ray_cast->dir), vect_temp);
 	struct_cast.ray_cast->dir = Normalize(struct_cast.ray_cast->dir);
 
 	*struct_cast.coeff_refraction *= scn.sph[object_current].material->refraction;
@@ -86,17 +89,22 @@ float		*RefractionSph(t_scene scn, t_castray struct_cast, int object_current, fl
 
 #if 0
 
-float		*RefractionSph(t_scene scn, t_castray struct_cast, int object_current, float *t, float *RGB)
+float		*RefractionSph(	t_scene scn, t_castray struct_cast,
+							int object_current, float *t, float *RGB)
 {
 	// Point d'intersection et vecteur normal
-	t_vector	point_intersect = Addition(struct_cast.ray_cast->start, Prod(*t, struct_cast.ray_cast->dir));
+	t_vector	point_intersect = Addition(	struct_cast.ray_cast->start,
+											Prod(*t, struct_cast.ray_cast->dir));
 	t_vector	vect_normal = Substraction(point_intersect, scn.sph[object_current].center);
 	vect_normal = Normalize(vect_normal);
 
 	if (scn.sph[object_current].material->bump > 0.0f)
-		vect_normal = BumpMapping(vect_normal, point_intersect, scn.sph[object_current].material->bump);
+		vect_normal = BumpMapping(	vect_normal, point_intersect,
+									scn.sph[object_current].material->bump);
 
-	t_brdf struct_brdf = CreateBrdf(struct_cast.ray_cast, point_intersect, vect_normal, scn.sph[object_current].material, *struct_cast.coeff_reflection);
+	t_brdf struct_brdf = CreateBrdf(struct_cast.ray_cast,
+									point_intersect, vect_normal, scn.sph[object_current].material,
+									*struct_cast.coeff_reflection);
 	RGB = Brdf(scn, struct_brdf, t, RGB);
 
 
@@ -121,7 +129,8 @@ float		*RefractionSph(t_scene scn, t_castray struct_cast, int object_current, fl
 
 	// On envoie le rayon transmis
 	struct_cast.ray_cast->start = point_intersect;
-	struct_cast.ray_cast->dir = Substraction(Prod(index_refractive, struct_cast.ray_cast->dir), vect_temp);
+	struct_cast.ray_cast->dir = Substraction(Prod(index_refractive,
+											struct_cast.ray_cast->dir), vect_temp);
 	struct_cast.ray_cast->dir = Normalize(struct_cast.ray_cast->dir);
 
 	*struct_cast.coeff_refraction *= scn.sph[object_current].material->refraction;
