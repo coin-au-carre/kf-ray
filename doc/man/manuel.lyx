@@ -54,10 +54,6 @@ Manuel d'utilisation de
 KF-Ray 1.0.1, raytracer paralléle
 \end_layout
 
-\begin_layout Author
-Karin Aït-Si-Amer & Florian DANG
-\end_layout
-
 \begin_layout Date
 Mai 2009
 \end_layout
@@ -726,6 +722,15 @@ front end
 \end_inset
 
 )
+\end_layout
+
+\begin_layout Standard
+Pour lancer l'interface graphique, tapez 
+\emph on
+./kfray_gui.
+ 
+\emph default
+Vous devriez voir une fenêtre apparaître !
 \end_layout
 
 \begin_layout Standard
@@ -2385,6 +2390,18 @@ Voilà vous venez d'apprendre à utiliser les différentes fonctionnalités
  l'avancement du projet sur http://kf-ray.googlecode.com.
  Vous y avez notamment dans le wiki les listes des futures fonctionnalités
  de KF-Ray.
+\end_layout
+
+\begin_layout Standard
+Contact : 
+\begin_inset Newline newline
+\end_inset
+
+Karin Aït-Si-Amer <aitsiame@polytech.upmc.fr>
+\begin_inset Newline newline
+\end_inset
+
+Florian Dang <tdang@polytech.upmc.fr>
 \end_layout
 
 \end_body
