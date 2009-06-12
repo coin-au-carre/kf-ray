@@ -1,4 +1,4 @@
-#LyX 1.6.2 created this file. For more info see http://www.lyx.org/
+#LyX 1.6.3 created this file. For more info see http://www.lyx.org/
 \lyxformat 345
 \begin_document
 \begin_header
@@ -47,7 +47,7 @@
 \begin_body
 
 \begin_layout Title
-Manuel d'utilisation de 
+Manuel d'utilisation v2 de 
 \begin_inset Newline newline
 \end_inset
 
@@ -69,9 +69,9 @@ Vous êtes en possession de KF-Ray un programme qui permet de générer des
 \end_layout
 
 \begin_layout Paragraph
-KF-Ray se veut être se veut être simple d'utilisation en incluant une interface
- graphique, tout en ayant à disposition des fonctionnalités puissantes et
- avancées en particulier sur le parallélisme.
+KF-Ray se veut être simple d'utilisation en incluant une interface graphique,
+ tout en ayant à disposition des fonctionnalités puissantes et avancées
+ en particulier sur le parallélisme.
  KF-Ray a un code explicite documenté par Doxygen et se montre donc didactique
  pour tout curieux souhaitant programmer.
  Vous avez à disposition dans la sous-section 1.1.3 les features de KF-Ray.
@@ -84,9 +84,8 @@ Ce manuel d'utilisation va vous permettre de prendre en main rapidement
 \end_layout
 
 \begin_layout Paragraph
-Tout d'abord, après avoir compiler KF-Ray, vous allez pour une première
- approche lancer le programme sans option pour générer votre première image
- 3D.
+Tout d'abord, après avoir compilé KF-Ray, vous allez pour une première approche
+ lancer le programme sans option pour générer votre première image 3D.
  Ensuite, vous allez apprendre à écrire des fichiers de scènes KFR pour
  réaliser vos propres scènes.
  Enfin vous pourrez générer leur rendu 3D avec le programme en console ou
@@ -2148,7 +2147,7 @@ Exemple :
 \begin_inset Newline newline
 \end_inset
 
-127.0.0.1 #Pour que le maître travaille également
+127.0.0.1 #Astuce pour que le maître travaille également
 \begin_inset Newline newline
 \end_inset
 
@@ -2205,7 +2204,7 @@ Voici la commande générale permettant d'utiliser KF-Ray en parallèle sur
 \begin_layout Standard
 
 \shape italic
-mpirun -v -c [nombre processus] kfray [-options] [arguments]
+mpirun -c [nombre processus] kfray [-options] [arguments]
 \end_layout
 
 \begin_layout Standard
