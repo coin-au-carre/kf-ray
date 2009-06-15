@@ -41,6 +41,10 @@
 #include "models/postprocessing.h"
 #include "misc/image.c"
 
+#ifdef _OPENMP
+# include <omp.h>
+#endif
+
 
 void	Raytracer(t_scene scn, char *img_name)
 {
@@ -56,12 +60,16 @@ void	Raytracer(t_scene scn, char *img_name)
 
 	printf(">> Balayage :				[En cours...]\n");
 
+	#pragma omp parallel
+	{
+	// A voir c'est pas convaincant
+	#pragma omp for schedule(dynamic, 2) private(x)
 	for (y=0; y<scn.viewport[1]; y++)
 		for (x=0; x<scn.viewport[0]; x++)
 			ComputePixel(scn, image, x, y);
 
+	}
 	SaveImage(image, img_name, scn.viewport[0], scn.viewport[1]);
-
 	FreeScene(scn);
 	//free(image); WTF Segmentation fault sur shell mais pas sur codeblocks ?!
 }
