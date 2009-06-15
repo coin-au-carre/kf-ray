@@ -4,7 +4,7 @@
 INCLUDES = \
 	-DPACKAGE_DATA_DIR=\""$(datadir)"\" \
 	-DPACKAGE_LOCALE_DIR=\""$(prefix)/$(DATADIRNAME)/locale"\" \
-	@PACKAGE_CFLAGS@
+	@PACKAGE_CFLAGS@ 
 
 # Sous-repertoires
 SUBDIRS = misc objects loader models raycaster textures parallel frontend
@@ -18,6 +18,8 @@ kfray_SOURCES = \
 
 kfray_LDADD = @PACKAGE_LIBS@ $(INTLLIBS) -Lobjects -Lraycaster -Lmodels -Lmisc -Lloader -Lparallel -Ltextures \
 					 -lraycaster -lobjects -lmodels -lmisc -lloader -lparallel -ltextures
+
+kfray_CFLAGS = -fopenmp $(AM_CFLAGS)
 
 #kfray_gui_LDADD = @PACKAGE_LIBS@ $(INTLLIBS) -Lmisc -Lfrontend \
 #	-lmisc -lfrontend
