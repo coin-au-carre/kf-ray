@@ -60,9 +60,15 @@ void	Raytracer(t_scene scn, char *img_name)
 
 	printf(">> Balayage :				[En cours...]\n");
 
+	#ifdef _OPENMP
+	// On regarde combien il y a de cores
+	if(omp_get_num_procs() > 0)
+                omp_set_num_threads(omp_get_num_procs());
+	#endif
+
 	#pragma omp parallel
 	{
-	// A voir c'est pas convaincant
+	// A voir c'est pas convaincant ce dynamic
 	#pragma omp for schedule(dynamic, 2) private(x)
 	for (y=0; y<scn.viewport[1]; y++)
 		for (x=0; x<scn.viewport[0]; x++)
