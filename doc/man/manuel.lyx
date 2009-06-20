@@ -1,4 +1,4 @@
-#LyX 1.6.2 created this file. For more info see http://www.lyx.org/
+#LyX 1.6.3 created this file. For more info see http://www.lyx.org/
 \lyxformat 345
 \begin_document
 \begin_header
@@ -55,7 +55,7 @@ KF-Ray 1.0.2, raytracer paralléle
 \end_layout
 
 \begin_layout Date
-Mai 2009
+Juin 2009
 \end_layout
 
 \begin_layout Paragraph
@@ -755,7 +755,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename kfraygui.png
-	scale 80
+	scale 40
 
 \end_inset
 
@@ -2065,13 +2065,17 @@ Choisissez les options voulus, l'image de sortie (tout est optionnel), et
 \end_layout
 
 \begin_layout Section
-Parallélisation avec MPI
+Parallélisme avec MPI
 \end_layout
 
 \begin_layout Standard
-Le but du parallélisme avec MPI est de faire travailler plusieurs processeurs/or
-dinateurs afin de diminuer le temps de calcul et donc générer des images
- plus rapidement.
+Le but du parallélisme à mémoire distribuée avec MPI est de faire travailler
+ plusieurs processeurs/ordinateurs afin de diminuer le temps de calcul et
+ donc générer des images plus rapidement.
+ Depuis la version 1.0.2, KF-Ray gère du parallélisme à mémoire partagée pour
+ une machine multi-coeurs.
+ Son exécution est transparente pour l'utilisateur, KF-Ray détecte le nombre
+ de coeurs à utiliser et répartit son travail selon.
 \end_layout
 
 \begin_layout Subsection
@@ -2081,7 +2085,7 @@ Requis
 \begin_layout Standard
 OpenMPI et LAM/MPI sur plusieurs ordinateurs.
  Vous pouvez utilisez d'autres versions mais nous illustrons nos exemples
- en utilisant ces librairies.
+ en utilisant ces implémentations de MPI.
 \end_layout
 
 \begin_layout Standard
@@ -2206,7 +2210,7 @@ mpirun -c [nombre processus] kfray [-options] [arguments]
 \begin_layout Standard
 Exemples d'utilisation : 
 \shape italic
-mpirun -v -c 10 kfray -i scene4.kfr -d -l 14
+mpirun -c 10 kfray -i scene4.kfr -d -l 14
 \end_layout
 
 \begin_layout Standard
@@ -2289,14 +2293,15 @@ Un des points forts de KF-Ray est de pouvoir générer plusieurs images grâce
  à l'interface graphique.
  Cette génération est simple et modifie le point de vue de la caméra suivant
  le rang de l'image généré.
- Actuellement, cette version de KF-Ray ne peut que faire des translations
- simples avec la caméra.
- Cela reste suffisant pour produire des animations impressionnantes !
+ Actuellement, la version de KF-Ray ne peut que faire des translations simples
+ avec la caméra.
+ Cela reste suffisant pour produire des animations impressionnantes ! Vous
+ pouvez toujours regarder et modifier le code source pour avoir plus de
+ possibilités d'animation.
 \end_layout
 
 \begin_layout Standard
-Voici comment procéder.
- Après avoir choisi les différentes options de votre rendu avec l'interface
+Après avoir choisi les différentes options de votre rendu avec l'interface
  graphique cochez 
 \shape italic
 Générateur activé
@@ -2309,8 +2314,8 @@ Générateur activé
 \end_layout
 
 \begin_layout Standard
-Une fois les images générées, placez-vous dans le répertoire où les images
- ont été générés et tappez (nécessite ImageMagick) :
+Une fois les images générées, placez-vous dans le répertoire des images
+ générées et tappez (nécessite ImageMagick) :
 \end_layout
 
 \begin_layout Standard
