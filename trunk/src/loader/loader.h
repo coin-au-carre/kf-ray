@@ -101,4 +101,8 @@ t_light		*DefaultLight	(t_material mat_jaune,
 				t_material mat_magenta,
 				t_material mat_cyan);
 
+
+t_scene		LoadTestScn	(int model_brdf, int model_texture,
+				int opt_aliasing);
+
 #endif	/* LOADER_H_ */

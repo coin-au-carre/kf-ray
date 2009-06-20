@@ -11,7 +11,9 @@ libobjects_a_SOURCES = \
 	vector.c vector.h \
 	scene.c scene.h \
 	light.c light.h \
+	material.c material.h \
 	sphere.c sphere.h \
 	plan.c plan.h \
-	material.c material.h
+	cylinder.c cylinder.h
+
 

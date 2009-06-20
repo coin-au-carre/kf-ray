@@ -48,7 +48,6 @@
 
 void	Raytracer(t_scene scn, char *img_name)
 {
-
 	InfoRaytracer(scn, img_name);
 
 	int		x;
