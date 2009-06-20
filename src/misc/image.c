@@ -49,7 +49,7 @@ void	SaveImage(unsigned char *image, char *img_name, int w, int h)
 {
 
 	char *ptr;
-	ptr = (char *) malloc(MAX_FILE_LENGTH * sizeof(char));
+	ptr = (char *) malloc(MAX_FILE_LENGTH * sizeof (char));
 
 	if (img_name[0] == '/')
 	{
@@ -61,7 +61,7 @@ void	SaveImage(unsigned char *image, char *img_name, int w, int h)
 
 	FILE* file_img = fopen(ptr, "w");
 	fprintf(file_img, "P6\n%d %d\n%d\n", w, h, 255);
-	const size_t bytes = fwrite(image, sizeof(char), w * h * 3, file_img);
+	const size_t bytes = fwrite(image, sizeof (char), w * h * 3, file_img);
 	if (bytes) { }		// Pour que codeblocks arrête de warning
 	fclose(file_img);
 
@@ -73,7 +73,7 @@ void	SaveImage(unsigned char *image, char *img_name, int w, int h)
 int	ShowImage(char *img_name)
 {
 	char *ptr;
-	ptr = (char *) malloc(MAX_FILE_LENGTH * sizeof(char));
+	ptr = (char *) malloc(MAX_FILE_LENGTH * sizeof (char));
 
 	sprintf(ptr, "../scenes/images/%s", img_name);
 	execlp("display","display", ptr, NULL);
@@ -86,7 +86,7 @@ int	ShowImage(char *img_name)
 int	ShowImageSys(char *img_name)
 {
 	char *ptr;
-	ptr = (char *) malloc(MAX_FILE_LENGTH * sizeof(char));
+	ptr = (char *) malloc(MAX_FILE_LENGTH * sizeof (char));
 
 	sprintf(ptr, "display ../scenes/images/%s", img_name);
 	if (system(ptr))
@@ -103,7 +103,7 @@ void SaveImage2(unsigned char *image, char *img_name, int w, int h)
 	char *buf;
 	char *ptr;
 
-	if ((buf = (char *)malloc((size_t) MAX_FILE_LENGTH)) != NULL)
+	if ((buf = (char *) malloc((size_t) MAX_FILE_LENGTH)) != NULL)
 		ptr = getcwd(buf, (size_t) MAX_FILE_LENGTH);
 
 	fprintf(stdout, "%s\n", ptr);
@@ -120,7 +120,7 @@ void SaveImage2(unsigned char *image, char *img_name, int w, int h)
 
 	FILE* file_img = fopen(ptr, "w");
 	fprintf(file_img, "P6\n%d %d\n%d\n", w, h, 255);
-	const size_t bytes = fwrite(image, sizeof(char), w * h * 3, file_img);
+	const size_t bytes = fwrite(image, sizeof (char), w * h * 3, file_img);
 	if (bytes) { }
 	fclose(file_img);
 

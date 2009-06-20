@@ -30,6 +30,7 @@
 #include "material.h"
 #include "plan.h"
 #include "sphere.h"
+#include "cylinder.h"
 
 /*	--------------------
 		Structures

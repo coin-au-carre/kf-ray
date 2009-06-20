@@ -80,6 +80,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="../src/models/postprocessing.h" />
+		<Unit filename="../src/objects/cylinder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/objects/cylinder.h" />
 		<Unit filename="../src/objects/light.c">
 			<Option compilerVar="CC" />
 		</Unit>

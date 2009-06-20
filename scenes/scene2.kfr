@@ -5,8 +5,8 @@
 // Amusez vous à changer les coefficients !
 
 Scene{
-	Width = 640;
-	Height = 480;
+	Width = 320;
+	Height = 240;
 	Materials = 1;
 	Planes = 0;
 	Spheres = 1;
@@ -29,7 +29,7 @@ Material{
 }
 
 Sphere{
-	Center = 320.0, 220.0, 10.0;
+	Center = 160.0, 120.0, 10.0;
 	Radius = 140.0;
 	Material = 1;
 }

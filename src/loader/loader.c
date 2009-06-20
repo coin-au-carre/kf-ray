@@ -28,7 +28,6 @@
 #include <stdio.h>
 #include <string.h>
 #include "parser_yy.c"
-#include "../objects/scene.h"
 #include "loader.h"
 
 t_scene			Loader		(char *scn_name, int model_brdf,
@@ -186,6 +185,35 @@ t_light			*DefaultLight	(t_material mat_jaune,
 }
 
 
+
+t_scene			LoadTestScn	(int model_brdf, int model_texture,
+					int opt_aliasing)
+{
+	int		viewport[] = {640, 480};
+	t_camera	camera;
+	camera = CreateCamera	(CreateVector(0.0f, 0.0f, -210.0f), 2000.0f);
+	t_options options;
+
+	options.model_brdf = model_brdf;
+	options.model_texture = model_texture;
+	options.opt_aliasing = opt_aliasing;
+
+	t_cylinder	cyl_1;
+	t_light		light;
+	t_material	mat_jaune;
+
+	float		rgb_yellow[3] = {MAX_COLOR, MAX_COLOR, 0.0f};
+
+	mat_jaune = CreateMaterial(MATERIAL_TURBULENCE, rgb_yellow, 0.5f, 1.0f, 60.0f, 1.0f, 0.0f, 1.0f, 1.0f);
+
+//	cyl_1 = CreateCylinder(CreateVector(200.0f, 200.0f, 200.0f), CreateVector(0.0f, 1.0f, 0.0f), 200.0f, &mat_jaune);
+//
+//	t_cylinder list_cyl[1] = { cyl_1 };
+
+	t_scene scn = CreateScene(viewport, 0, 1, 1, NULL, NULL, NULL, options, camera);
+
+	return scn;
+}
 
 /* A titre d'exemples des scènes "à la main" non regardés par le compilateur */
 /* Ne pas prendre en compte le code ci-dessous. */
