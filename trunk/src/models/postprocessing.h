@@ -52,5 +52,7 @@ float	*AntiAliasing(t_scene scn, float *RGB, int x, int y);
  */
 float	*GammaCorrection(float *RGB);
 
+float	*Filter(float coeff_r, float coeff_g, float coeff_b, float *RGB);
+
 
 #endif /* POSTPROCESSING_H */

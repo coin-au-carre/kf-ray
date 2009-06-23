@@ -102,7 +102,7 @@ typedef struct 	s_options
  *
  * \return 	Nouveau tableau identique à celui passé en paramètre
  */
-float	*CopyfArray(float *Tab0, int length);
+float		*CopyfArray(float *Tab0, int length);
 
 /**
  * \fn 		float	*CopyiArray(int *Tab0, int length);

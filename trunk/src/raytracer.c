@@ -45,6 +45,7 @@
 # include <omp.h>
 #endif
 
+//#define MY_ANAGLYPH
 
 void	Raytracer(t_scene scn, char *img_name)
 {
@@ -104,6 +105,38 @@ void	*ComputePixel(t_scene scn, unsigned char *image, int x, int y)
 	}
 	else
 		RGB = AntiAliasing(scn, RGB, x, y);
+
+	/* Anaglyph Test */
+
+
+	#ifdef MY_ANAGLYPH
+
+	RGB = Filter(1.0f, 1.0f, 0.2f, RGB);
+
+	float	*RGB_3D;
+	RGB_3D = (float*) malloc(3 * sizeof (float));
+
+	// On initialise RGB à [0,0,0]
+	for (k = 0 ; k < 3; k++)
+		RGB_3D[k] = 0.0f;
+
+	if (scn.options.opt_aliasing == 0)
+	{
+		t_ray ray_cast = CameraRay(scn, x + 6, y);
+		t_castray struct_cast = CreateCastray	(&ray_cast, &level,
+							&coeff_reflection, &coeff_refraction);
+
+		RGB_3D = CastRay(scn, struct_cast, RGB_3D);
+	}
+	else
+		RGB_3D = AntiAliasing(scn, RGB_3D, x, y);
+
+	RGB_3D = Filter(0.2f, 0.2f, 1.0f, RGB_3D);
+
+	for (k = 0 ; k < 3; k++)
+		RGB[k] = MIN(MAX_COLOR, (RGB[k] + RGB_3D[k]));
+
+	#endif
 
 	// Remise à l'échelle
 	for (k = 0 ; k < 3; k++)

@@ -98,3 +98,4 @@ float	*Mist(t_scene scn, t_vector point_intersect, float *RGB)
 
 	return RGB;
 }
+
