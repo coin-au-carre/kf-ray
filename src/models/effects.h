@@ -61,4 +61,4 @@ t_vector	BumpMapping(t_vector vect_normal, t_vector point_intersect, float bump)
  */
 float		*Mist(t_scene scn, t_vector point_intersect, float *RGB);
 
- #endif
+#endif /* EFFECTS_H_ */
