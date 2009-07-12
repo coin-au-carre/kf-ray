@@ -6,7 +6,7 @@ scene
 	height = 768
 	materials = 7
 	planes = 1
-	spheres = 37
+	spheres = 53
 	lights = 2
 	camera = 0.0, 0.0, -200.0
 	distview = 1000.0
@@ -385,6 +385,128 @@ sphere
 	material = 1
 }
 
+
+// Barre N
+// |
+
+sphere
+{
+	center = 650.0, 780.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 650.0, 740.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 650.0, 700.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 650.0, 660.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 650.0, 620.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 650.0, 580.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+
+// Barre oblique N
+// \
+
+sphere
+{
+	center = 690.0, 740.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 720.0, 700.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 750.0, 660.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 780.0, 620.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+// Barre last N
+// |
+
+sphere
+{
+	center = 820.0, 780.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 820.0, 740.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 820.0, 700.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 820.0, 660.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 820.0, 620.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 820.0, 580.0, 20.0
+	radius = 16.0
+	material = 1
+}
 
 
 /////////////// PLAN /////////////
