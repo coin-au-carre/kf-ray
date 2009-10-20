@@ -26,9 +26,7 @@
 
 /**
  * \fn 		float	*AntiAliasing(t_scene scn, float *RGB, int x, int y);
- * \brief 	Fonction d'anti-aliasing (antialiassage) par méthode de supersampling.
- *
- * \bug		Méthode par supersamling ne fonctionne pas pour n_samples > 4. A regarder.
+ * \brief 	Fonction d'anti-aliasing (antialiassage) par méthode de Monte Carlo
  *
  * \param 	scn	Scène 3D
  * \param 	RGB	Couleur RVB

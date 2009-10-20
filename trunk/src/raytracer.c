@@ -142,11 +142,12 @@ void	*ComputePixel(t_scene scn, unsigned char *image, int x, int y)
 
 	#endif
 
+//	RGB = GammaCorrection(RGB);
+
 	// Remise à l'échelle
 	for (k = 0 ; k < 3; k++)
 		RGB[k] = RGB[k] * 255.0f / MAX_COLOR;
 
-	//RGB = GammaCorrection(RGB);
 	SetPixel(image, scn.viewport[0], x, y,
 		(int) RGB[0], (int) RGB[1], (int) RGB[2]);
 
@@ -198,7 +199,6 @@ t_ray	CameraRayFree(t_scene scn, int x, int y)
 						scn.viewport[1] - (y * vect_j.y + scn.camera.point.y),
 						scn.camera.point.z + x * vect_i.z + y * vect_j.z );
 	*/
-
 
 	t_vector point_spectator = CreateVector	(x  + scn.camera.point.x,
 						scn.viewport[1] - (y + scn.camera.point.y),
