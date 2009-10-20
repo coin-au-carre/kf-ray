@@ -64,7 +64,7 @@ void	*ComputePixel(t_scene scn, unsigned char *image, int x, int y);
  *
  * \return 	un rayon pour le lancer de rayon
  */
-t_ray	CameraRay(t_scene scn, int x, int y);
+t_ray	CameraRay(t_scene scn, float x, float y);
 
 
 #endif	/*	RAYRACER_H_	*/
