@@ -31,6 +31,7 @@
 #include <math.h>
 #include <string.h>
 #include <errno.h>
+#include <time.h>
 
 #include "raytracer.h"
 #include "raycaster/raycaster.h"
@@ -59,6 +60,9 @@ void	Raytracer(t_scene scn, char *img_name)
 			malloc(scn.viewport[0] * scn.viewport[1] * 3 * sizeof (unsigned char));
 
 	printf(">> Balayage :				[En cours...]\n");
+
+	if (scn.options.opt_aliasing != 0)
+		srand((unsigned)time(NULL));
 
 	#ifdef _OPENMP
 	// On regarde combien il y a de cores
@@ -97,7 +101,7 @@ void	*ComputePixel(t_scene scn, unsigned char *image, int x, int y)
 
 	if (scn.options.opt_aliasing == 0)
 	{
-		t_ray ray_cast = CameraRay(scn, x, y);
+		t_ray ray_cast = CameraRay(scn, (float) x, (float) y);
 		t_castray struct_cast = CreateCastray	(&ray_cast, &level,
 							&coeff_reflection, &coeff_refraction);
 
@@ -122,7 +126,7 @@ void	*ComputePixel(t_scene scn, unsigned char *image, int x, int y)
 
 	if (scn.options.opt_aliasing == 0)
 	{
-		t_ray ray_cast = CameraRay(scn, x + 6, y);
+		t_ray ray_cast = CameraRay(scn, (float) x + 6.0f, (float) y);
 		t_castray struct_cast = CreateCastray	(&ray_cast, &level,
 							&coeff_reflection, &coeff_refraction);
 
@@ -140,7 +144,7 @@ void	*ComputePixel(t_scene scn, unsigned char *image, int x, int y)
 
 	// Remise à l'échelle
 	for (k = 0 ; k < 3; k++)
-		RGB[k] = RGB[k] * 255.0 / MAX_COLOR;
+		RGB[k] = RGB[k] * 255.0f / MAX_COLOR;
 
 	//RGB = GammaCorrection(RGB);
 	SetPixel(image, scn.viewport[0], x, y,
@@ -151,7 +155,7 @@ void	*ComputePixel(t_scene scn, unsigned char *image, int x, int y)
 }
 
 
-t_ray	CameraRay(t_scene scn, int x, int y)
+t_ray	CameraRay(t_scene scn, float x, float y)
 {
 	t_vector point_spectator = CreateVector	(x  + scn.camera.point.x,
 						scn.viewport[1] - (y + scn.camera.point.y),
