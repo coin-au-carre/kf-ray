@@ -36,18 +36,19 @@
 #include "../raycaster/raycaster.h"
 #include "postprocessing.h"
 
-#define MONTE_CARLO 33
+#define MONTE_CARLO 60		// Pourcentage de reussite pour un rayon d etre lancer
 
 float *AntiAliasing(t_scene scn, float *RGB, int x, int y)
 {
 		int	k;
 		float	x_delta, y_delta;
-		int	n_samples = 16;	// doit être un carré supersampling
-		float	delta = 1.0f / sqrtf(n_samples);
-		int	n_cases = 0;
 		int 	level;
 		float 	coeff_reflection;
 		float	coeff_refraction;
+
+		int	n_samples = 9;	// doit être un carré supersampling
+		float	delta = 1.0f / sqrtf(n_samples);
+		int	n_cases = 0;
 
 		float	*RGB_samples;
 		RGB_samples = (float *) malloc(3 * sizeof (float));
@@ -93,13 +94,8 @@ float *AntiAliasing(t_scene scn, float *RGB, int x, int y)
 		}
 		else
 		{
-			for ( k = 0 ; k < 3; k ++ )
-				RGB[k] /= n_cases;
-
-			//fprintf(stdout, "cases = %d ", n_cases);
-
 			for (k = 0 ; k < 3; k++)
-				RGB[k] = MIN(RGB[k], MAX_COLOR);
+				RGB[k] = MIN(RGB[k]/n_cases, MAX_COLOR);
 		}
 
 		free(RGB_samples);
@@ -112,9 +108,9 @@ float *GammaCorrection(float *RGB)
 {
 	float invgamma = 1.0/2.2f;
 
-	RGB[0] = MIN(powf(RGB[0] * 255.0f, invgamma), 255.0f);
-	RGB[1] = MIN(powf(RGB[1] * 255.0f, invgamma), 255.0f);
-	RGB[2] = MIN(powf(RGB[2] * 255.0f, invgamma), 255.0f);
+	RGB[0] = MIN(powf(RGB[0] * MAX_COLOR, invgamma), MAX_COLOR);
+	RGB[1] = MIN(powf(RGB[1] * MAX_COLOR, invgamma), MAX_COLOR);
+	RGB[2] = MIN(powf(RGB[2] * MAX_COLOR, invgamma), MAX_COLOR);
 
 	return RGB;
 }
