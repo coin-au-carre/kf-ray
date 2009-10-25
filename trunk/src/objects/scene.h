@@ -75,8 +75,8 @@ typedef struct	s_camera
  *
  * Définit la scène 3D par :
  * - la résolution de l'image,
- * - le nombre de plans, de sphères, de lumières,
- * - sa liste de plans, de sphères, de lumières,
+ * - le nombre de plans, de sphères, de cylindres, de lumières,
+ * - sa liste de plans, de sphères, de cylindres, de lumières,
  * - les options (modèle d'éclairage, activation/désactivation des textures),
  * - sa camera
  */
@@ -86,9 +86,11 @@ typedef struct	s_scene
 	int		*viewport;		/*!< Résolution de l'image */
 	int		n_plane;		/*!< Nombre de plans */
 	int		n_sph;			/*!< Nombre de sphères */
+	int		n_cyl;			/*!< Nombre de cylindres */
 	int		n_light;		/*!< Nombre de lumières */
 	t_plane		*plane;			/*!< Liste des plans */
 	t_sphere 	*sph;			/*!< Liste des sphères */
+	t_cylinder	*cyl;			/*!< Liste des cylindres */
 	t_light		*light;			/*!< Liste des lumières */
 	t_options	options;		/*!< Diverses options de rendu */
 	t_camera	camera;			/*!< Caméra */
@@ -178,9 +180,9 @@ void		PrintCamera(t_camera camera);
  *
  * \return 	Scène 3D
  */
- t_scene	CreateScene	(int *viewport0, int n_plane0, int n_sph0, int n_light0,
-				t_plane *list_plane0, t_sphere *list_sph0, t_light *list_light0,
-				t_options options0, t_camera camera0);
+t_scene			CreateScene	(int *viewport0, int n_plane0, int n_sph0, int n_cyl0, int n_light0,
+					t_plane *list_plane0, t_sphere *list_sph0, t_cylinder *cyl0, t_light *list_light0,
+					t_options options0, t_camera camera0);
 
 
 /**

@@ -79,34 +79,40 @@ void			PrintCamera(t_camera camera)
 }
 
 
-t_scene			CreateScene	(int *viewport0, int n_plane0, int n_sph0, int n_light0,
-					t_plane *list_plane0, t_sphere *list_sph0, t_light *list_light0,
+t_scene			CreateScene	(int *viewport0, int n_plane0, int n_sph0, int n_cyl0, int n_light0,
+					t_plane *list_plane0, t_sphere *list_sph0, t_cylinder *list_cyl0, t_light *list_light0,
 					t_options options0, t_camera camera0)
 {
 	int		i;
 	t_scene		scn;
 	t_plane		*list_plane;
 	t_sphere	*list_sph;
+	t_cylinder 	*list_cyl;
 	t_light		*list_light;
 
 	list_plane = (t_plane *) malloc(n_plane0 * sizeof (t_plane));
 	list_sph = (t_sphere *) malloc(n_sph0 * sizeof (t_sphere));
+	list_cyl = (t_cylinder *) malloc(n_cyl0 * sizeof (t_cylinder));
 	list_light = (t_light *) malloc(n_light0 * sizeof (t_sphere));
 
 	scn.viewport = CopyiArray(viewport0, 2);
 	scn.n_plane = n_plane0;
 	scn.n_sph = n_sph0;
+	scn.n_cyl = n_cyl0;
 	scn.n_light = n_light0;
 
 	for (i=0; i < n_plane0; i++)
 		list_plane[i] = *CopyPlane(&list_plane0[i]);
 	for (i=0; i < n_sph0; i++)
 		list_sph[i] = *CopySphere(&list_sph0[i]);
+	for (i=0; i < n_cyl0; i++)
+		list_cyl[i] = *CopyCylinder(&list_cyl0[i]);
 	for (i=0; i < n_light0; i++)
 		list_light[i] = *CopyLight(&list_light0[i]);
 
 	scn.plane = list_plane;
 	scn.sph = list_sph;
+	scn.cyl = list_cyl;
 	scn.light = list_light;
 
 	scn.options = options0;

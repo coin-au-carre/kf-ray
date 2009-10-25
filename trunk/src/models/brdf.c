@@ -92,7 +92,7 @@ bool		Shadow(t_scene scn, t_ray ray_light, t_vector vect_light)
 
 	for ( i = 0; i < scn.n_sph; i++)
 		if (InterSphere(ray_light, scn.sph[i], &dist_light))
-			if (scn.sph[i].material->density <= 1.0f)	// Ne pas oublier le cas si l'objet est transparent !
+			if (scn.sph[i].material->density < 1.0f)	// Ne pas oublier le cas si l'objet est transparent !
 				return TRUE;
 	#endif
 

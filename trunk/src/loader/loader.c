@@ -50,6 +50,7 @@ t_scene			Loader		(char *scn_name, int model_brdf,
 
 	if (strcmp(scn_name,"") == 0)
 		scn = LoadDefaultScn(model_brdf, model_texture, opt_aliasing);
+		//scn = LoadTestScn(model_brdf, model_texture, opt_aliasing);
 	else
 		scn = LoaderParser(scn_name, options);
 
@@ -102,8 +103,8 @@ t_scene			LoadDefaultScn	(int model_brdf, int model_texture,
 
 	camera = CreateCamera	(CreateVector(0.0f, 0.0f, -210.0f), 2000.0f);
 
-	scn_default = CreateScene	(viewport, 0, 3, 2,
-					list_plane, list_sphere,list_light, options, camera);
+	scn_default = CreateScene	(viewport, 0, 3, 0, 2,
+					list_plane, list_sphere, NULL, list_light, options, camera);
 
 	free(list_light);
 	free(list_sphere);
@@ -189,30 +190,60 @@ t_light			*DefaultLight	(t_material mat_jaune,
 t_scene			LoadTestScn	(int model_brdf, int model_texture,
 					int opt_aliasing)
 {
+
 	int		viewport[] = {640, 480};
+	t_scene		scn_test;
 	t_camera	camera;
-	camera = CreateCamera	(CreateVector(0.0f, 0.0f, -210.0f), 2000.0f);
-	t_options options;
+
+	t_sphere	*list_sphere;
+	t_plane 	*list_plane = NULL;
+	t_light		*list_light;
+	t_options	options;
 
 	options.model_brdf = model_brdf;
 	options.model_texture = model_texture;
 	options.opt_aliasing = opt_aliasing;
 
+	camera = CreateCamera	(CreateVector(0.0f, 0.0f, -210.0f), 2000.0f);
+
 	t_cylinder	cyl_1;
-	t_light		light;
-	t_material	mat_jaune;
+	t_light		light_1, light_2;
+	t_material	mat_jaune, mat_cyan;
+	list_sphere = (t_sphere *) malloc(2 * sizeof (t_sphere));
+	list_light = (t_light *) malloc(2 * sizeof (t_light));
+	t_sphere sph_jaune, sph_cyan;
 
 	float		rgb_yellow[3] = {MAX_COLOR, MAX_COLOR, 0.0f};
+	float		rgb_cyan[3] = {0.0f, MAX_COLOR, MAX_COLOR};
 
-	mat_jaune = CreateMaterial(MATERIAL_TURBULENCE, rgb_yellow, 0.5f, 1.0f, 60.0f, 1.0f, 0.0f, 1.0f, 1.0f);
+	float		intensity_1[3] = {0.5f, 0.5f, 0.5f};
+	float		intensity_2[3] = {0.5f, 0.5f, 0.5f};
 
+	light_1 = CreateLight( CreateVector(100.0f, 240.0f,-1000.0f),  intensity_1 );
+	light_2 = CreateLight( CreateVector(640.0f,240.0f,-10000.0f), intensity_2 );
+
+	mat_jaune = CreateMaterial	(MATERIAL_NORMAL, rgb_yellow,
+					0.0f, 0.4f, 60.0f, 1.0f, 0.0f, 1.0f, 1.0f);
+	mat_cyan = CreateMaterial	(MATERIAL_NORMAL, rgb_cyan,
+					0.0f, 1.0f, 60.0f, 1.0f, 0.0f, 1.0f, 1.0f);
+	sph_cyan = CreateSphere(CreateVector(233.0, 290.0, 0.0), 200.0 , &mat_cyan);
+	sph_jaune = CreateSphere(CreateVector(480.0, 280.0, 200.0), 140.0, &mat_jaune);
+
+	list_sphere[0] = sph_cyan;
+	list_sphere[1] = sph_jaune;
+	list_light[0] = light_1;
+	list_light[1] = light_2;
 //	cyl_1 = CreateCylinder(CreateVector(200.0f, 200.0f, 200.0f), CreateVector(0.0f, 1.0f, 0.0f), 200.0f, &mat_jaune);
-//
 //	t_cylinder list_cyl[1] = { cyl_1 };
 
-	t_scene scn = CreateScene(viewport, 0, 1, 1, NULL, NULL, NULL, options, camera);
 
-	return scn;
+	scn_test = CreateScene(viewport, 0, 2, 0, 1, list_plane, list_sphere, NULL, list_light, options, camera);
+
+	free(list_sphere);
+	free(list_light);
+	free(list_plane);
+
+	return scn_test;
 }
 
 /* A titre d'exemples des scènes "à la main" non regardés par le compilateur */

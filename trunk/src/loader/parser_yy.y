@@ -348,11 +348,13 @@ t_scene LoaderParser(char *scn_name, t_options scn_opt)
 	
 	// On ouvre le fichier demandé
 	OpenFile(scn_name);
+	t_cylinder *list_cyl0 = NULL;
 
 	scene.viewport = CopyiArray(viewport0, 2);
 	scene.plane = list_plane0;
 	scene.sph = list_sph0;
 	scene.light = list_light0;
+	scene.cyl = list_cyl0;
 							
 	scene.camera = camera0;
 
