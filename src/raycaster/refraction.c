@@ -43,7 +43,7 @@ float		*RefractionSph(	t_scene scn, t_castray struct_cast,
 {
 	// Point d'intersection et vecteur normal
 	t_vector	point_intersect = Addition(	struct_cast.ray_cast->start,
-											Prod(*t, struct_cast.ray_cast->dir));
+							Prod(*t, struct_cast.ray_cast->dir));
 	t_vector	vect_normal = Substraction(point_intersect, scn.sph[object_current].center);
 	vect_normal = Normalize(vect_normal);
 
@@ -75,7 +75,7 @@ float		*RefractionSph(	t_scene scn, t_castray struct_cast,
 	// On envoie le rayon transmis
 	struct_cast.ray_cast->start = point_intersect;
 	struct_cast.ray_cast->dir = Substraction(	Prod(index_refractive,
-												struct_cast.ray_cast->dir), vect_temp);
+							struct_cast.ray_cast->dir), vect_temp);
 	struct_cast.ray_cast->dir = Normalize(struct_cast.ray_cast->dir);
 
 	*struct_cast.coeff_refraction *= scn.sph[object_current].material->refraction;
