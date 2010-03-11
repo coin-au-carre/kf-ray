@@ -1,9 +1,7 @@
 ## Makefile sous répertoire KF Ray
 
-INCLUDES = \
-	-DPACKAGE_DATA_DIR=\""$(datadir)"\" \
-	-DPACKAGE_LOCALE_DIR=\""$(prefix)/$(DATADIRNAME)/locale"\" \
-	@PACKAGE_CFLAGS@ -I../ -I../raycaster -I../models -I../misc -I../loader -I../textures
+INCLUDES = -I./ -I../raycaster -I../models -I../misc -I../loader -I../textures
+
 
 noinst_LIBRARIES = libobjects.a
 

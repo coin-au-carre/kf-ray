@@ -1,10 +1,6 @@
 ## Makefile sous répertoire KF Ray
 
-INCLUDES = \
-	-DPACKAGE_DATA_DIR=\""$(datadir)"\" \
-	-DPACKAGE_LOCALE_DIR=\""$(prefix)/$(DATADIRNAME)/locale"\" \
-	@PACKAGE_CFLAGS@ -I../ -I../objects -I../raycaster -I../misc -I../models -I../textures
-
+INCLUDES = -I./ -I../ -I../objects -I../raycaster -I../misc -I../models -I../textures
 
 BUILT_SOURCES = parser_yy.h
 AM_YFLAGS = -d
