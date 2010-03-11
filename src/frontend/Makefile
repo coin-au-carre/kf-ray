@@ -4,10 +4,10 @@ NAME    = kfray_gui
 SRC     = callbacks.c interface.c main_gui.c support.c functions.c
 INCL    = callbacks.h  interface.h  main_gui.h  support.h functions.h
 
-IPATH   = -I. -I.. -I../.. -DHAVE_CONFIG_H -DPACKAGE_DATA_DIR=\""/usr/local/share"\" -DPACKAGE_LOCALE_DIR=\""/usr/local/share/locale"\" `pkg-config gtk+-2.0  --cflags` 
-OBJOPT  = -O2 -Wall 
-EXEOPT  = -O2 -Wall
-LPATH   = -L. -lm `pkg-config gtk+-2.0  --libs` 
+IPATH   = -I. -I../.. -DHAVE_CONFIG_H -DPACKAGE_DATA_DIR=\""/usr/local/share"\" -DPACKAGE_LOCALE_DIR=\""/usr/local/share/locale"\" `pkg-config gtk+-2.0  --cflags` 
+OBJOPT  = -O3 -Wall 
+EXEOPT  = -O3 -Wall
+LPATH   = -L. `pkg-config gtk+-2.0  --libs` 
 
 CC      = gcc
 CXX     = g++
