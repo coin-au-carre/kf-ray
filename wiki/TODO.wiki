@@ -4,5 +4,11 @@
 
 Todo page crashed too...
 
-- KD-tree
-- CUDA
+Some ideas which will never be done.
+
+*Optimization*
+ * kd-tree
+ * CUDA
+
+*GUI*
+ * OpenGL preview
