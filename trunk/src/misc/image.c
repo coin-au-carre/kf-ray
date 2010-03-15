@@ -101,7 +101,7 @@ void SaveImage2(unsigned char *image, char *img_name, int w, int h)
 {
 
 	char *buf;
-	char *ptr;
+	char *ptr = NULL;
 
 	if ((buf = (char *) malloc((size_t) MAX_FILE_LENGTH)) != NULL)
 		ptr = getcwd(buf, (size_t) MAX_FILE_LENGTH);

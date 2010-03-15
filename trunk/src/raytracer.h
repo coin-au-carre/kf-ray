@@ -51,7 +51,7 @@ void	Raytracer(t_scene scn, char *img_name);
  *
  * \return 	Néant.
  */
-void	*ComputePixel(t_scene scn, unsigned char *image, int x, int y);
+void	ComputePixel(t_scene scn, unsigned char *image, int x, int y);
 
 
 /**
