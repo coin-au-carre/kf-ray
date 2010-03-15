@@ -3,10 +3,8 @@
 #sidebar TOCArticles
 <wiki:toc />
 
-
-In progress...
 A French PDF manual is available on the Downloads Tab.
-
+If someone is willing to make an English manual :p
 
 =README=
 {{{
@@ -17,8 +15,8 @@ Date 16 May 2009
 
 Contact
 -------
-aitsiame [at] polytech.upmc.fr
-tdang [at] polytech.upmc.fr
+aitsiame.karin [at] GMAIL
+florian.coin [at] GMAIL
 
 
 Dependencies
