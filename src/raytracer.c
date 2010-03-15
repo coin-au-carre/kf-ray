@@ -59,7 +59,8 @@ void	Raytracer(t_scene scn, char *img_name)
 	image  = 	(unsigned char*) \
 			malloc(scn.viewport[0] * scn.viewport[1] * 3 * sizeof (unsigned char));
 
-	printf(">> Balayage :				[En cours...]\n");
+	//printf(">> Balayage :				[En cours...]\n");
+	printf(">> Traitement en cours\n");
 
 	if (scn.options.opt_aliasing != 0)
 		srand((unsigned)time(NULL));
@@ -85,7 +86,7 @@ void	Raytracer(t_scene scn, char *img_name)
 }
 
 
-void	*ComputePixel(t_scene scn, unsigned char *image, int x, int y)
+void	ComputePixel(t_scene scn, unsigned char *image, int x, int y)
 {
 	int	k;
 	float 	coeff_reflection = 1.0f;
@@ -142,11 +143,11 @@ void	*ComputePixel(t_scene scn, unsigned char *image, int x, int y)
 
 	#endif
 
-//	RGB = GammaCorrection(RGB);
-
 	// Remise à l'échelle
 	for (k = 0 ; k < 3; k++)
 		RGB[k] = RGB[k] * 255.0f / MAX_COLOR;
+
+//	RGB = GammaCorrection(RGB);
 
 	SetPixel(image, scn.viewport[0], x, y,
 		(int) RGB[0], (int) RGB[1], (int) RGB[2]);
@@ -190,7 +191,7 @@ t_ray	CameraRayFree(t_scene scn, int x, int y)
 
 	t_vector point_view = Prod(scn.camera.center_view.z, vect_view);
 
-	/* Truc compliqué prise de tête qui marche pas normal faut rotationner le plan de vue -_-
+	/* Truc compliqué prise de tête qui marche pas normal faut rotationner le plan de vue -_- */
 	/*
 	t_vector vect_i = Normalize(CreateVector(1.0f, -(point_view.x / point_view.y), 0.0f));
 	t_vector vect_j = Normalize(CreateVector(1.0f, 0.0f, -(point_view.x / point_view.z)));

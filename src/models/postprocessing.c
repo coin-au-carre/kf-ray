@@ -107,10 +107,14 @@ float *AntiAliasing(t_scene scn, float *RGB, int x, int y)
 float *GammaCorrection(float *RGB)
 {
 	float invgamma = 1.0/2.2f;
-
+/*
 	RGB[0] = MIN(powf(RGB[0] * MAX_COLOR, invgamma), MAX_COLOR);
 	RGB[1] = MIN(powf(RGB[1] * MAX_COLOR, invgamma), MAX_COLOR);
 	RGB[2] = MIN(powf(RGB[2] * MAX_COLOR, invgamma), MAX_COLOR);
+*/
+	RGB[0] = MIN(powf(RGB[0] * 255.0f, invgamma), 255.0f);
+	RGB[1] = MIN(powf(RGB[1] * 255.0f, invgamma), 255.0f);
+	RGB[2] = MIN(powf(RGB[2] * 255.0f, invgamma), 255.0f);
 
 	return RGB;
 }

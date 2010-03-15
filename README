@@ -1,12 +1,12 @@
 KF-Ray Parallel Raytracer
-Release 1.0.1
-Date 16 May 2009
+Release 1.0.2
+Date May 2009 - Mars 2010
 
 
 Contact
 -------
-aitsiame@polytech.upmc.fr
-tdang@polytech.upmc.fr
+aitsiame.karin@gmail.com
+florian.coin@gmail.com
 
 
 Dependencies
@@ -14,8 +14,8 @@ Dependencies
 
 GCC and Make
 
-Display (optional do not use -d) :
-ImageMagick (useful for animation too)
+Display (optional if you do not use -d) :
+ImageMagick
 
 Parser (optionnal see below how to not use it) :
 Lexx/Yacc (work with Flex and Bison)
