@@ -5,7 +5,7 @@ Date May 2009 - Mars 2010
 
 Contact
 -------
-aitsiame.karin@gmail.com
+aitsiamer.karin@gmail.com
 florian.coin@gmail.com
 
 
@@ -24,8 +24,7 @@ Frontend GUI :
 GTK+ >= 2.x
 
 Parallel computing (optional) :
-MPI (work with OpenMPI and LAM/MPI)
-(would likely work with MPICH)
+MPI (you can use either OpenMPI or MPICH)
 
 
 Instructions
@@ -47,8 +46,7 @@ To not use MPI (by default) and return to GCC :
 in main.h you have to comment the line //define MY_MPI
 
 To not use Lexx & Yacc :
-edit configure.in
-comment the lines : 
+edit configure.in and comment the following lines : 
 #AC_PROG_LEX
 #AC_PROG_YACC
 
@@ -59,6 +57,6 @@ Installation
 See INSTALL
 
 
-You can consult the user guide or wiki for more informations.
+You can consult the user guide or wiki for further details.
 
 Enjoy !
