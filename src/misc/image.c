@@ -53,7 +53,7 @@ void	SaveImage(unsigned char *image, char *img_name, int w, int h)
 
 	if (img_name[0] == '/')
 	{
-		perror("Erreur : Le programme n'accepte pas les chemins complets");
+		perror("!! Error : The program does not allow absolute path !");
 		return;
 	}
 
@@ -116,7 +116,7 @@ void SaveImage2(unsigned char *image, char *img_name, int w, int h)
 		strcat(ptr, img_name);
 	}
 	else
-		perror("!Erreur : Le programme n'accepte pas les chemins complets");
+		perror("!! Error : The program does not allow absolute path !");
 
 	FILE* file_img = fopen(ptr, "w");
 	fprintf(file_img, "P6\n%d %d\n%d\n", w, h, 255);

@@ -29,27 +29,24 @@ void	InfoRaytracer(t_scene scn, char *img_name)
 	else
 		strcpy(txt_aliasing, txt_active);
 
-	printf(">> Chargement de la scene :\
-		[OK]\n");
+	printf(">> Scene loading	:	[OK]\n");
 
-	printf(">> Nom de l'image de sortie :\
-		[%s]\n", img_name);
+	printf(">> Image output		:	[%s]\n", img_name);
 
-	printf(">> BRDF/Texture/Aliasing :\
-		[%d/%s/%s]\n", scn.options.model_brdf, txt_texture, txt_aliasing);
+	printf(">> BRDF/Texture/AA 	:\
+	[%d/%s/%s]\n", scn.options.model_brdf, txt_texture, txt_aliasing);
 
-	printf(">> Dimension Viewport :\
-			[%dx%d]\n", scn.viewport[0], scn.viewport[1]);
+	printf(">> Viewport dimension	:	[%dx%d]\n", scn.viewport[0], scn.viewport[1]);
 
-	printf(">> Plans/Spheres/Sources :\
-		[%d/%d/%d]\n", scn.n_plane, scn.n_sph, scn.n_light);
+	printf(">> Plane/Sphere/Light	:\
+	[%d/%d/%d]\n", scn.n_plane, scn.n_sph, scn.n_light);
 }
 
 void	InfoMaster(char *img_name, int w, int h, int n_proc, int n_lines)
 {
-	printf(">> Chargement de la scene :		[OK]\n");
-	printf(">> Nom de l'image de sortie :		[%s]\n", img_name);
-	printf(">> Dimension Viewport :			[%dx%d]\n", w, h);
-	printf(">> Parallelisme active :		[OK]\n");
-	printf(">> Processus/lines :			[%d/%d]\n", n_proc, n_lines);
+	printf(">> Scene loading	 :	[OK]\n");
+	printf(">> Image output		 :	[%s]\n", img_name);
+	printf(">> Viewport dimension	:	[%dx%d]\n", w, h);
+	printf(">> Parallel computing MPI :	[OK]\n");
+	printf(">> Processus/lines :		[%d/%d]\n", n_proc, n_lines);
 }
