@@ -98,7 +98,7 @@ int		CallRaytracer	(t_scene scn, int opt_display,
 		ForkRaytracer(scn, img_name);
 
 	double fin = my_gettimeofday();
-	fprintf( stdout, "\n>> Calcul terminé en : 			[%g sec]\n\n", fin - debut);
+	fprintf( stdout, "\n>> Calcul terminé en : 		[%g s]\n\n", fin - debut);
 #else
 	MPI_Status status;
 
@@ -122,7 +122,7 @@ int		CallRaytracer	(t_scene scn, int opt_display,
 
 	// Chronométrage pour chaque processus
 	double	fin = my_gettimeofday();
-	fprintf( stdout, "# Processus %d a terminé en : %g sec\n", rank, fin - debut);
+	fprintf( stdout, "# Processus %d a terminé en : %g s\n", rank, fin - debut);
 
 	MPI_Finalize();
 

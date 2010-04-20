@@ -36,7 +36,7 @@
 #include "../raycaster/raycaster.h"
 #include "postprocessing.h"
 
-#define MONTE_CARLO 60		// Pourcentage de reussite pour un rayon d etre lancer
+#define MONTE_CARLO 50		// Pourcentage de reussite pour un rayon d etre lance
 
 float *AntiAliasing(t_scene scn, float *RGB, int x, int y)
 {
