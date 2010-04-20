@@ -22,9 +22,9 @@ kfray_SOURCES = \
 kfray_LDADD = @PACKAGE_LIBS@ $(INTLLIBS) -Lobjects -Lraycaster -Lmodels -Lmisc -Lloader -Lparallel -Ltextures \
 					 -lraycaster -lobjects -lmodels -lmisc -lloader -lparallel -ltextures
 					 
-kfray_LDFLAGS = -fopenmp
+#kfray_LDFLAGS = -fopenmp
 
-kfray_CFLAGS = $(AM_CFLAGS) -fopenmp -Wall -pipe
+kfray_CFLAGS = $(AM_CFLAGS) -Wall -pipe
 
 #kfray_gui_LDADD = @PACKAGE_LIBS@ $(INTLLIBS) -Lmisc -Lfrontend \
 #	-lmisc -lfrontend

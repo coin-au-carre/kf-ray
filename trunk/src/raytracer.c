@@ -98,6 +98,7 @@ void	ComputePixel(t_scene scn, unsigned char *image, int x, int y)
 
 	// On initialise RGB à [0,0,0]
 	for (k = 0 ; k < 3; k++)
+		//RGB[k] = 0.0f;
 		RGB[k] = 0.0f;
 
 	if (scn.options.opt_aliasing == 0)
