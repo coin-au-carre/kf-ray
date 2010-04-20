@@ -24,7 +24,7 @@ kfray_LDADD = @PACKAGE_LIBS@ $(INTLLIBS) -Lobjects -Lraycaster -Lmodels -Lmisc -
 					 
 #kfray_LDFLAGS = -fopenmp
 
-kfray_CFLAGS = $(AM_CFLAGS) -Wall -pipe
+kfray_CFLAGS = $(AM_CFLAGS) $(OPENMP_CFLAGS) -Wall -pipe
 
 #kfray_gui_LDADD = @PACKAGE_LIBS@ $(INTLLIBS) -Lmisc -Lfrontend \
 #	-lmisc -lfrontend

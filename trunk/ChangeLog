@@ -1,8 +1,15 @@
+v1.1
+----
+* Automake plus propre
+* Anti-aliasing avec Monte Carlo
+* Parallélisme à mémoire partagé avec OpenMP
+
+
 v1.0.2
 ------
 * Ajout mist (brouillard)
 * Correction options arguments backend
-* Retouche affichage usage help
+* Retouches affichage
 
 
 Release v1.0.1 
