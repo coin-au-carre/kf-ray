@@ -32,10 +32,10 @@ static const char splash[] = "\
 \n/**/**  /**///////// /**///**    *******  /**   \
 \n/**//** /**          /**  //**  **////**  **    \
 \n/** //**/**          /**   //**//**********     \
-\n//   // //           //     //  //////////      \
-\n\nKF-Ray - Raytracer parallele ecrit en C\
-\n	 par Karin Ait-Si-Amer et Florian Dang\
-\n		(c) Copyright 2009 reportez-vous a COPYING.\n\n\
+\n//   // //           //     //  //////////      v1.1\
+\n\nKF-Ray - Parallel raytracer written in C\
+\n	 by Karin Ait-Si-Amer and Florian Dang\
+\n		(c) Copyright 2009-2010 refer to COPYING.\n\n\
 ";/*!< Texte de présentation */
 
 

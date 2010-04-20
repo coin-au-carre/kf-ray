@@ -98,7 +98,7 @@ int		CallRaytracer	(t_scene scn, int opt_display,
 		ForkRaytracer(scn, img_name);
 
 	double fin = my_gettimeofday();
-	fprintf( stdout, "\n>> Calcul terminé en : 		[%g s]\n\n", fin - debut);
+	fprintf( stdout, "\n>> Processed in 	: 	[%g s]\n\n", fin - debut);
 #else
 	MPI_Status status;
 
@@ -122,7 +122,7 @@ int		CallRaytracer	(t_scene scn, int opt_display,
 
 	// Chronométrage pour chaque processus
 	double	fin = my_gettimeofday();
-	fprintf( stdout, "# Processus %d a terminé en : %g s\n", rank, fin - debut);
+	fprintf( stdout, "# Process %d finished in : %g s\n", rank, fin - debut);
 
 	MPI_Finalize();
 
@@ -139,7 +139,7 @@ int		ForkRaytracer(t_scene scn, char *img_name)
 
 	if (pid == -1)
 	{
-		perror( "ERREUR ! Probleme fork !\n");
+		perror( "(EE) Error ! Fork problem !\n");
 		return EXIT_FAILURE;
 	}
 	else if (pid == 0)		// Fils
@@ -154,7 +154,7 @@ int		ForkRaytracer(t_scene scn, char *img_name)
 		waitpid(pid, &pid_status, WUNTRACED);	// On attend que le raytracer finisse
 
 		if (ShowImage(img_name))
-			perror("Erreur Exec");
+			perror("Exec error !");
 
 		return EXIT_FAILURE;
 	}

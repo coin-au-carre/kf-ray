@@ -51,15 +51,15 @@ Options spéciales :\n\
  -c		: Supprime tous les fichiers ppm\n\
 \n\
 Exemples d'exécution :\n\
- kfray -i 4 -d\n\
- kfray -i exemple1 -o img1 -b 1 -t\n\
- mpirun -v -c 10 kfray -i example3 -o img3 -b 3 -l 12 -d\n\n\
+ kfray -i scene4 -d\n\
+ kfray -i scene1 -o img1 -b 1 -t\n\
+ mpirun -v -c 10 kfray -i scene3 -o img3 -b 3 -l 12 -d\n\n\
 ";	/*!< Texte d'aide à afficher pour l'option -h */
 
 
 static const char usage[] = "\
 Usage :\n\
-kfray [-i Scene] [-o Image] [-b Modele]\
+kfray [-i Scene] [-o Image] [-b Modele] \
 [-v Distance] [-m Brouillard] [-t] [-a] [-l Lignes] [-d]\n\
 ";	/*!< Texte d'utilisation de KF-Ray */
 

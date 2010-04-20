@@ -126,7 +126,7 @@ int		LookArguments(int argc, char **argv, t_arguments arg_main)
 
 #ifndef MY_MPI
 	printf("%s", splash);
-	printf(">> Nom du fichier de scene :		[%s]\n", arg_main.scn_name);
+	printf(">> Scene file		:	[%s]\n", arg_main.scn_name);
 #endif
 
 	return	 OPT_CONTINUE;
@@ -222,7 +222,7 @@ int		OptBrdf(int *model_brdf, char *optarg)
 		*model_brdf = atoi(optarg);
 	else
 	{
-		printf("L'option -b doit avoir un argument compris entre 1 et 3\n");
+		printf("-b option should have a number between 1 and 3\n");
 		printf(usage);
 
 		return OPT_STOP;
@@ -246,7 +246,7 @@ int		OptLines(int *n_lines, char *optarg)
 		*n_lines = atoi(optarg);
 	else
 	{
-		printf("L'option -l doit avoir un argument compris entre 1 et le hauteur de l'image\n");
+		printf("-l option should have a number between 1 and image height\n");
 		printf(usage);
 
 		return OPT_STOP;
@@ -273,9 +273,9 @@ int		OptMist(int *opt_mist, char *optarg)
 
 int		OptUnknown(char *prgm_name)
 {
-	printf ("KF-Ray - commande inconnue...\n");
+	printf ("KF-Ray - Unknown commande...\n");
 	printf(usage);
-	printf ("Pour afficher l'aide : %s -h\n", prgm_name);
+	printf ("For help type : %s -h\n", prgm_name);
 
 	return	OPT_STOP;
 }

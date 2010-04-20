@@ -58,8 +58,9 @@ float *AntiAliasing(t_scene scn, float *RGB, int x, int y)
 			{
 				if (rand() % 100 < MONTE_CARLO)	// Monte Carlo
 				{
-					for ( k = 0 ; k < 3; k ++ )
-						RGB_samples[k] = 0.0f;
+					RGB_samples[0] = 0.0f;
+					RGB_samples[1] = 0.0f;
+					RGB_samples[2] = 0.0f;
 
 					level = 0;
 					coeff_reflection = 1.0f;
@@ -73,8 +74,9 @@ float *AntiAliasing(t_scene scn, float *RGB, int x, int y)
 
 					RGB_samples = CastRay(scn, struct_cast, RGB_samples);
 
-					for ( k = 0 ; k < 3; k ++ )
-						RGB[k] += RGB_samples[k];
+					RGB[0] += RGB_samples[0];
+					RGB[1] += RGB_samples[1];
+					RGB[2] += RGB_samples[2];
 
 					n_cases ++;
 				}
@@ -94,8 +96,9 @@ float *AntiAliasing(t_scene scn, float *RGB, int x, int y)
 		}
 		else
 		{
-			for (k = 0 ; k < 3; k++)
-				RGB[k] = MIN(RGB[k]/n_cases, MAX_COLOR);
+			RGB[0] = MIN(RGB[0]/n_cases, MAX_COLOR);
+			RGB[1] = MIN(RGB[1]/n_cases, MAX_COLOR);
+			RGB[2] = MIN(RGB[2]/n_cases, MAX_COLOR);
 		}
 
 		free(RGB_samples);

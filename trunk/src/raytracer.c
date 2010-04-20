@@ -60,7 +60,7 @@ void	Raytracer(t_scene scn, char *img_name)
 			malloc(scn.viewport[0] * scn.viewport[1] * 3 * sizeof (unsigned char));
 
 	//printf(">> Balayage :				[En cours...]\n");
-	printf(">> Traitement en cours\n");
+	printf(">> Ray tracing...\n");
 
 	if (scn.options.opt_aliasing != 0)
 		srand((unsigned)time(NULL));
@@ -74,9 +74,9 @@ void	Raytracer(t_scene scn, char *img_name)
 	#pragma omp parallel
 	{
 	// A voir c'est pas convaincant ce dynamic
-	#pragma omp for schedule(dynamic, 2) private(x)
-	for (y=0; y<scn.viewport[1]; y++)
-		for (x=0; x<scn.viewport[0]; x++)
+	#pragma omp for schedule(dynamic, 2) private(x, y)
+	for (y = 0; y < scn.viewport[1]; y ++)
+		for (x = 0; x < scn.viewport[0]; x ++)
 			ComputePixel(scn, image, x, y);
 
 	}
@@ -88,7 +88,6 @@ void	Raytracer(t_scene scn, char *img_name)
 
 void	ComputePixel(t_scene scn, unsigned char *image, int x, int y)
 {
-	int	k;
 	float 	coeff_reflection = 1.0f;
 	float	coeff_refraction = 1.0f;
 	int 	level = 0;
@@ -96,10 +95,9 @@ void	ComputePixel(t_scene scn, unsigned char *image, int x, int y)
 	float	*RGB;
 	RGB = (float*) malloc(3 * sizeof (float));
 
-	// On initialise RGB à [0,0,0]
-	for (k = 0 ; k < 3; k++)
-		//RGB[k] = 0.0f;
-		RGB[k] = 0.0f;
+	RGB[0] = 0.0f;
+	RGB[1] = 0.0f;
+	RGB[2] = 0.0f;
 
 	if (scn.options.opt_aliasing == 0)
 	{
@@ -115,7 +113,7 @@ void	ComputePixel(t_scene scn, unsigned char *image, int x, int y)
 	/* Anaglyph Test */
 
 
-	#ifdef MY_ANAGLYPH
+#ifdef MY_ANAGLYPH
 
 	RGB = Filter(1.0f, 1.0f, 0.2f, RGB);
 
@@ -142,11 +140,17 @@ void	ComputePixel(t_scene scn, unsigned char *image, int x, int y)
 	for (k = 0 ; k < 3; k++)
 		RGB[k] = MIN(MAX_COLOR, (RGB[k] + RGB_3D[k]));
 
-	#endif
+#endif
 
 	// Remise à l'échelle
-	for (k = 0 ; k < 3; k++)
-		RGB[k] = RGB[k] * 255.0f / MAX_COLOR;
+	
+//	for (k = 0 ; k < 3; k++)
+//		RGB[k] = RGB[k] * 255.0f / MAX_COLOR;
+
+	// Déroulage boucle pour perfs
+	RGB[0] = RGB[0] * 255.0f / MAX_COLOR;
+	RGB[1] = RGB[1] * 255.0f / MAX_COLOR;
+	RGB[2] = RGB[2] * 255.0f / MAX_COLOR;
 
 //	RGB = GammaCorrection(RGB);
 
