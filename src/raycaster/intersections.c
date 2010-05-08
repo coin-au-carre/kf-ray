@@ -120,3 +120,11 @@ bool	InterSphere2(t_ray ray, t_sphere sph, float *t)
 
 	return	bool_tmp;
 }
+
+
+//bool	InterCylinder(t_ray ray, t_cylinder cyl, float *t)
+//{
+//
+//
+//
+//}

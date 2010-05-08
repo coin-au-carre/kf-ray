@@ -41,7 +41,7 @@ typedef struct 	s_cylinder
 
 	t_vector	point;		/*!< Centre du cylindre */
 	t_vector	dir;		/*!< Un vecteur directeur du cylindre */
-	float		height;
+	float		height;		/*!< Hauteur du cylindre */
 	t_material	*material;	/*!< Matériau du cylindre */
 
 }		t_cylinder;

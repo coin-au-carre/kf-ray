@@ -1,4 +1,4 @@
-#LyX 1.6.3 created this file. For more info see http://www.lyx.org/
+#LyX 1.6.4 created this file. For more info see http://www.lyx.org/
 \lyxformat 345
 \begin_document
 \begin_header
@@ -679,7 +679,8 @@ L'option -a (anti-aliasing)
 
 \begin_layout Standard
 Active l'anti-aliasing par méthode de sur-échantillonage (supersampling).
- Cette fonction doit être améliorée dans les prochaines versions.
+ Cette fonction utilise en plus la méthode de Monte-Carlo depuis la version
+ 1.0.2.
 \end_layout
 
 \begin_layout Standard
@@ -2274,10 +2275,10 @@ petis objets entièrement ou partiellement cachés
 
 \begin_layout Standard
 La fonction antialiassage implémentée dans KF-Ray utilise la méthode de
- supersampling mais n'est pas encore très convaincante.
- Vous pouvez toujours l'utiliser le programme essayera de rendre une image
- plus précise.
- Elle sera améliorée dans les versions à venir.
+ supersampling qui consiste a envoyer plus de rayons ainsi que la méthode
+ de Monte Carlo qui choisit ces rayons stochastiquement pour éviter les
+ effets de moirés par exemple.
+ Cette méthode donnant un rendu plus précis est couteuse en calcul.
 \end_layout
 
 \begin_layout Section
@@ -2397,11 +2398,11 @@ Contact :
 \begin_inset Newline newline
 \end_inset
 
-Karin Aït-Si-Amer <aitsiame@polytech.upmc.fr>
+Karin Aït-Si-Amer <aitsiamer.karin@gmail.com>
 \begin_inset Newline newline
 \end_inset
 
-Florian Dang <tdang@polytech.upmc.fr>
+Florian Dang <florian.coin@gmail.com>
 \end_layout
 
 \end_body

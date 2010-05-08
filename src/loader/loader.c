@@ -50,16 +50,17 @@ t_scene			Loader		(char *scn_name, int model_brdf,
 
 	if (strcmp(scn_name,"") == 0)
 		scn = LoadDefaultScn(model_brdf, model_texture, opt_aliasing);
-		//scn = LoadTestScn(model_brdf, model_texture, opt_aliasing);
+//		scn = LoadTestScn(model_brdf, model_texture, opt_aliasing);
 	else
 		scn = LoaderParser(scn_name, options);
 
 	// Pour l'animation par défaut
-	scn.camera.point.z += cam_move;	//On va vers l'avant
+	//scn.camera.point.z += cam_move;	//On va vers l'avant
 
 	/* Animation pour la scène 4 qui roxxe */
+
+	//scn.camera.point.x += cam_move;		//On bouge à gauche
 	/*
-	scn.camera.point.x += cam_move;		//On bouge à gauche
 	scn.sph[0].center.x += 2.0*cam_move;
 	scn.sph[0].center.y += 0.6*cam_move;
 	scn.sph[1].center.x += 3.0*cam_move;
@@ -198,6 +199,7 @@ t_scene			LoadTestScn	(int model_brdf, int model_texture,
 	t_sphere	*list_sphere;
 	t_plane 	*list_plane = NULL;
 	t_light		*list_light;
+	t_cylinder	*list_cylinder;
 	t_options	options;
 
 	options.model_brdf = model_brdf;
@@ -211,6 +213,7 @@ t_scene			LoadTestScn	(int model_brdf, int model_texture,
 	t_material	mat_jaune, mat_cyan;
 	list_sphere = (t_sphere *) malloc(2 * sizeof (t_sphere));
 	list_light = (t_light *) malloc(2 * sizeof (t_light));
+	list_cylinder = (t_cylinder *) malloc(1 * sizeof (t_cylinder));
 	t_sphere sph_jaune, sph_cyan;
 
 	float		rgb_yellow[3] = {MAX_COLOR, MAX_COLOR, 0.0f};
@@ -229,19 +232,21 @@ t_scene			LoadTestScn	(int model_brdf, int model_texture,
 	sph_cyan = CreateSphere(CreateVector(233.0, 290.0, 0.0), 200.0 , &mat_cyan);
 	sph_jaune = CreateSphere(CreateVector(480.0, 280.0, 200.0), 140.0, &mat_jaune);
 
+	//CreateCylinder(t_vector point0, t_vector dir0, float height0, t_material *mat0)
+	cyl_1 = CreateCylinder(CreateVector(200.0f, 200.0f, 200.0f), CreateVector(0.0f, 1.0f, 0.0f), 200.0f, &mat_jaune);
+	list_cylinder[0] = cyl_1;
+
 	list_sphere[0] = sph_cyan;
 	list_sphere[1] = sph_jaune;
 	list_light[0] = light_1;
 	list_light[1] = light_2;
-//	cyl_1 = CreateCylinder(CreateVector(200.0f, 200.0f, 200.0f), CreateVector(0.0f, 1.0f, 0.0f), 200.0f, &mat_jaune);
-//	t_cylinder list_cyl[1] = { cyl_1 };
 
-
-	scn_test = CreateScene(viewport, 0, 2, 0, 1, list_plane, list_sphere, NULL, list_light, options, camera);
+	scn_test = CreateScene(viewport, 0, 2, 1, 1, list_plane, list_sphere, list_cylinder, list_light, options, camera);
 
 	free(list_sphere);
 	free(list_light);
 	free(list_plane);
+	free(list_cylinder);
 
 	return scn_test;
 }
