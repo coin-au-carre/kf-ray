@@ -159,6 +159,6 @@ int		ForkRaytracer(t_scene scn, char *img_name)
 		return EXIT_FAILURE;
 	}
 
-    return 	0;
+	return	0;
 }
 

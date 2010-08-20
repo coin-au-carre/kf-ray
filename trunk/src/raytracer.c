@@ -112,7 +112,6 @@ void	ComputePixel(t_scene scn, unsigned char *image, int x, int y)
 
 	/* Anaglyph Test */
 
-
 #ifdef MY_ANAGLYPH
 
 	RGB = Filter(1.0f, 1.0f, 0.2f, RGB);
@@ -121,12 +120,14 @@ void	ComputePixel(t_scene scn, unsigned char *image, int x, int y)
 	RGB_3D = (float*) malloc(3 * sizeof (float));
 
 	// On initialise RGB à [0,0,0]
-	for (k = 0 ; k < 3; k++)
-		RGB_3D[k] = 0.0f;
+
+		RGB_3D[0] = 0.0f;
+		RGB_3D[1] = 0.0f;
+		RGB_3D[2] = 0.0f;
 
 	if (scn.options.opt_aliasing == 0)
 	{
-		t_ray ray_cast = CameraRay(scn, (float) x + 6.0f, (float) y);
+		t_ray ray_cast = CameraRay(scn, (float) x + 10.0f, (float) y);
 		t_castray struct_cast = CreateCastray	(&ray_cast, &level,
 							&coeff_reflection, &coeff_refraction);
 
@@ -137,9 +138,9 @@ void	ComputePixel(t_scene scn, unsigned char *image, int x, int y)
 
 	RGB_3D = Filter(0.2f, 0.2f, 1.0f, RGB_3D);
 
-	for (k = 0 ; k < 3; k++)
-		RGB[k] = MIN(MAX_COLOR, (RGB[k] + RGB_3D[k]));
-
+	RGB[0] = MIN(MAX_COLOR, (RGB[0] + RGB_3D[0]));
+	RGB[1] = MIN(MAX_COLOR, (RGB[1] + RGB_3D[1]));
+	RGB[2] = MIN(MAX_COLOR, (RGB[2] + RGB_3D[2]));
 #endif
 
 	// Remise à l'échelle
