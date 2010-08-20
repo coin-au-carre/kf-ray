@@ -29,14 +29,12 @@ void	InfoRaytracer(t_scene scn, char *img_name)
 	else
 		strcpy(txt_aliasing, txt_active);
 
-	printf(">> Scene loading	:	[OK]\n");
-
 	printf(">> Image output		:	[%s]\n", img_name);
+
+	printf(">> Viewport dimension	:	[%dx%d]\n", scn.viewport[0], scn.viewport[1]);
 
 	printf(">> BRDF/Texture/AA 	:\
 	[%d/%s/%s]\n", scn.options.model_brdf, txt_texture, txt_aliasing);
-
-	printf(">> Viewport dimension	:	[%dx%d]\n", scn.viewport[0], scn.viewport[1]);
 
 	printf(">> Plane/Sphere/Light	:\
 	[%d/%d/%d]\n", scn.n_plane, scn.n_sph, scn.n_light);
@@ -44,7 +42,6 @@ void	InfoRaytracer(t_scene scn, char *img_name)
 
 void	InfoMaster(char *img_name, int w, int h, int n_proc, int n_lines)
 {
-	printf(">> Scene loading	 :	[OK]\n");
 	printf(">> Image output		 :	[%s]\n", img_name);
 	printf(">> Viewport dimension	:	[%dx%d]\n", w, h);
 	printf(">> Parallel computing MPI :	[OK]\n");

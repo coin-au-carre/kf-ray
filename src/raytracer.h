@@ -25,6 +25,7 @@
 
 #include "objects/scene.h"
 
+//#define MY_ANAGLYPH
 
 /* Prototypes */
 
