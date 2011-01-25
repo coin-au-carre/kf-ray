@@ -1,0 +1,533 @@
+/* Special Kr1 by coin*/
+
+scene
+{
+	width = 1024
+	height = 768
+	materials = 7
+	planes = 1
+	spheres = 53
+	lights = 2
+	camera = 0.0, 0.0, -200.0
+	distview = 1000.0
+}
+
+
+// mat jaune
+material
+{
+	id = 1
+	type = normal
+	rgb = 255.0, 255.0, 0.0
+	reflection = 0.4
+	specular = 0.1
+	roughness = 600.0
+	perlin = 1.25
+	bump = 0.3
+}
+
+
+// mat bleu
+material
+{
+	id = 2
+	type = normal
+	rgb = 0.0, 0.0, 255.0
+	reflection = 0.8
+	specular = 0.8
+	roughness = 1000.0
+	perlin = 1.25
+	bump = 0.0
+}
+
+// mat vert
+material{
+	id = 3
+	type = wood
+	rgb = 0.0, 255.0, 0.0
+	reflection = 0.2
+	specular = 0.2
+	roughness = 100.0
+	perlin = 1.25
+	bump = 0.0
+}
+
+// mat magenta
+material{
+	id = 4
+	type = checker
+	rgb = 255.0, 0.0, 255.0
+	reflection = 0.8
+	specular = 0.8
+	roughness = 1000.0
+	perlin = 1.0
+	bump = 0.0
+}
+
+// mat cyan
+material{
+	id = 5
+	type = turbulence
+	rgb = 0.0, 255.0, 255.0
+	reflection = 0.5
+	specular = 0.2
+	roughness = 60.0
+	perlin = 1.25
+	bump = 0.0
+}
+
+// mat rouge
+material{
+	id = 6
+	type = marbel
+	rgb = 255.0, 0.0, 0.0
+	reflection = 0.1
+	specular = 1.0
+	roughness = 60.0
+	perlin = 1.25
+	bump = 0.0
+}
+
+// mat plan
+material{
+	id = 7
+	type = normal
+	rgb = 0.0, 0.0, 255.0
+	reflection = 0.8
+	specular = 0.6
+	roughness = 60.0
+	perlin = 1.25
+	bump = 0.0
+}
+
+// Barre K
+// |
+
+sphere{
+	center = 50.0, 780.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere{
+	center = 50.0, 740.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 50.0, 700.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 50.0, 660.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 50.0, 620.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 50.0, 580.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+
+
+// Reste K
+// <
+
+sphere
+{
+	center = 90.0, 660.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 90.0, 700.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+
+sphere
+{
+	center = 120.0, 630.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 120.0, 730.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 150.0, 600.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 150.0, 760.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 180.0, 570.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 180.0, 790.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+
+
+// Barre R
+// |
+
+
+sphere{
+	center = 250.0, 780.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere{
+	center = 250.0, 740.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 250.0, 700.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 250.0, 660.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 250.0, 620.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 250.0, 580.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+
+// Rond R
+// D
+
+sphere
+{
+	center = 290.0, 780.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 290.0, 680.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 330.0, 776.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 330.0, 684.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 360.0, 754.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 360.0, 706.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+
+// Pied de R
+// \
+
+sphere
+{
+	center = 290.0, 640.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 320.0, 610.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 350.0, 580.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+
+// Barre 1
+// |
+
+sphere
+{
+	center = 530.0, 780.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 530.0, 740.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 530.0, 700.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 530.0, 660.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 530.0, 620.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 530.0, 580.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+// Reste 1
+// /
+
+sphere
+{
+	center = 490.0, 750.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 460.0, 720.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+
+// Barre N
+// |
+
+sphere
+{
+	center = 650.0, 780.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 650.0, 740.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 650.0, 700.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 650.0, 660.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 650.0, 620.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 650.0, 580.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+
+// Barre oblique N
+// \
+
+sphere
+{
+	center = 690.0, 740.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 720.0, 700.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 750.0, 660.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 780.0, 620.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+// Barre last N
+// |
+
+sphere
+{
+	center = 820.0, 780.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 820.0, 740.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 820.0, 700.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 820.0, 660.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 820.0, 620.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+sphere
+{
+	center = 820.0, 580.0, 20.0
+	radius = 16.0
+	material = 1
+}
+
+
+/////////////// PLAN /////////////
+
+
+plane
+{
+	normal = 0.0, -1.0, 0.05
+	distance = 20.0
+	material = 7
+}
+
+light
+{
+	position = 800.0, 300.0, 600.0
+	intensity = 0.4, 0.4, 0.4
+}
+
+light
+{
+	position = 100.0, 400.0, -1200.0
+	intensity = 0.6, 0.6, 0.6
+}
+
