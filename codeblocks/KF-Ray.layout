@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="..\src\CudaGLWindow\SimpleCudaGLWindow.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="1863" topLine="463" />
+	</File>
+	<File name="..\src\CudaGLWindow\SimpleCudaGLWindow.h" open="1" top="1" tabpos="3">
+		<Cursor position="1899" topLine="24" />
+	</File>
+	<File name="..\src\loader\loader.c" open="1" top="0" tabpos="1">
+		<Cursor position="7600" topLine="364" />
+	</File>
+	<File name="..\src\misc\image.c" open="1" top="0" tabpos="2">
+		<Cursor position="1147" topLine="30" />
+	</File>
+</CodeBlocks_layout_file>
