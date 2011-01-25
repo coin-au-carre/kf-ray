@@ -1,6 +1,0 @@
-  * [Welcome ↑ Home]
-    * [Manual KF-Ray Manual]
-    * [CodingStyle Coding rules for KF-Ray]
-    * [TODO Todo list and plans]
-    * [Links Useful links]
-    * [Comments Comments]

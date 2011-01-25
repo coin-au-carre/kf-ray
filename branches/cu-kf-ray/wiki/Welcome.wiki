@@ -1,4 +1,0 @@
-#summary Wiki page
-#sidebar TOCArticles
-<wiki:toc />
-Welcome wiki crashed... We can post [Comments comments] here.
