@@ -20,7 +20,7 @@ kfray_SOURCES = \
 	raytracer.c raytracer.h
 
 kfray_LDADD = @PACKAGE_LIBS@ $(INTLLIBS) -Lobjects -Lraycaster -Lmodels -Lmisc -Lloader -Lparallel -Ltextures \
-					 -lraycaster -lobjects -lmodels -lmisc -lloader -lparallel -ltextures
+					 -lraycaster -lobjects -lmodels -lmisc -lloader -lparallel -ltextures -lm
 					 
 #kfray_LDFLAGS = -fopenmp
 
